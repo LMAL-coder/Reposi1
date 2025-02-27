@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Role xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="d34b08dc-bdd0-4f9f-97c1-ed1ce5211b94">
+  <name>ЗГ_НачисленияЗП_Настройки</name>
+  <synonym>
+    <key>ru</key>
+    <value>ЗГ_НачисленияЗП_Настройки</value>
+  </synonym>
+</mdclass:Role>

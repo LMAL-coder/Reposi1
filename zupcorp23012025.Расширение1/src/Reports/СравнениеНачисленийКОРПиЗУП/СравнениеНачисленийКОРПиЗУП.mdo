@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Report xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="a749cf8a-b16d-4de4-a5e9-15b941e15f5b">
+  <producedTypes>
+    <objectType typeId="8ac79e7b-6c54-4913-bf9f-df15144c6f6f" valueTypeId="f6155cd4-927a-40af-99ea-f1a04f42e44e"/>
+    <managerType typeId="3b4b15be-3a44-4c41-af9d-5a5863b51c62" valueTypeId="f9cb03be-a211-4110-a190-fa1940325417"/>
+  </producedTypes>
+  <name>СравнениеНачисленийКОРПиЗУП</name>
+  <synonym>
+    <key>ru</key>
+    <value>Сравнение начислений КОРП и ЗУП</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>Report.СравнениеНачисленийКОРПиЗУП.Form.ФормаОтчета</defaultForm>
+  <mainDataCompositionSchema>Report.СравнениеНачисленийКОРПиЗУП.Template.ОсновнаяСхемаКомпоновкиДанных</mainDataCompositionSchema>
+  <forms uuid="0c323368-fda6-4e47-a84b-839efec96439">
+    <name>ФормаОтчета</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма отчета</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="ff140b9e-c707-4531-a7dd-281625412585">
+    <name>ОсновнаяСхемаКомпоновкиДанных</name>
+    <synonym>
+      <key>ru</key>
+      <value>Основная схема компоновки данных</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+</mdclass:Report>

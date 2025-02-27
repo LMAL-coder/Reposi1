@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Report xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="66fb8967-8e8b-4b79-84c6-51edb8f06810">
+  <producedTypes>
+    <objectType typeId="5621484d-9934-4bf5-8407-e106fb43071c" valueTypeId="a3d4012f-9068-4817-80e8-7229f89792bd"/>
+    <managerType typeId="a46dd857-e26c-4652-a1e2-963cd53fd9d0" valueTypeId="1c79d0d9-5c54-4d88-82ec-8f3c9605a533"/>
+  </producedTypes>
+  <name>СравнениеТабелейУУиЮУ</name>
+  <synonym>
+    <key>ru</key>
+    <value>Сравнение распределения табелей УУ и ЮУ</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>Report.СравнениеТабелейУУиЮУ.Form.ФормаОтчета</defaultForm>
+  <mainDataCompositionSchema>Report.СравнениеТабелейУУиЮУ.Template.ОсновнаяСхемаКомпоновкиДанных</mainDataCompositionSchema>
+  <variantsStorage>SettingsStorage.ХранилищеВариантовОтчетов</variantsStorage>
+  <forms uuid="dcc5e89f-9b82-47c1-b41e-edd4f906a420">
+    <name>ФормаОтчета</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма отчета</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="3cd4f662-f368-45ca-84d6-2f8feb0c9d01">
+    <name>ОсновнаяСхемаКомпоновкиДанных</name>
+    <synonym>
+      <key>ru</key>
+      <value>Основная схема компоновки данных</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+</mdclass:Report>

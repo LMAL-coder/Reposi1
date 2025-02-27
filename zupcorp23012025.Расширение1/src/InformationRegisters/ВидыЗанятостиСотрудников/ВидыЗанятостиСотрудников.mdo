@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="ef938067-74fd-48cc-acd9-34cb7f291b27" extendedConfigurationObject="e5b5b91e-1975-41cd-b4d1-c6c19ba8c6f0">
+  <producedTypes>
+    <selectionType typeId="f457e6fb-e422-4c07-b3e6-65cab704c7e5" valueTypeId="3106bd9d-87bc-48a2-b82a-cec37d32d8e7"/>
+    <listType typeId="e6a74fed-c45c-4b08-9ea4-eea3ebf3fb33" valueTypeId="50b1fe62-7bbf-4597-90b9-b182ba66cf20"/>
+    <managerType typeId="64002eab-1ad5-40ab-abd4-ad1df6eb2f2c" valueTypeId="1f692807-d26a-460d-9148-5da9f81a14ad"/>
+    <recordSetType typeId="5e9891dc-90f8-4034-a2f4-bfa57fdd668b" valueTypeId="aadfb380-68e8-46be-86f5-3e40d97b7150"/>
+    <recordKeyType typeId="a766ae2d-a789-4713-8bdf-a99d049793b4" valueTypeId="c78009c5-d7fa-493a-972e-b6dc2a505d16"/>
+    <recordType typeId="6fa833ab-3d9f-4a92-b5d7-46f320de40d1" valueTypeId="a7caf04e-534b-4424-a880-e818c44268c6"/>
+    <recordManagerType typeId="a69af936-a5db-45e7-9061-6963cce6cf35" valueTypeId="ef79e77b-5ac3-4007-98c9-a910f712c879"/>
+  </producedTypes>
+  <name>ВидыЗанятостиСотрудников</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:InformationRegisterExtension">
+    <extendedConfigurationObject>Checked</extendedConfigurationObject>
+    <informationRegisterPeriodicity>Checked</informationRegisterPeriodicity>
+    <writeMode>Checked</writeMode>
+  </extension>
+  <informationRegisterPeriodicity>Second</informationRegisterPeriodicity>
+  <writeMode>RecorderSubordinate</writeMode>
+  <resources uuid="89a3c3d4-c6fd-4097-8a44-45efba5a119b" extendedConfigurationObject="926fa512-51ea-46cb-ac2c-07058d80ada8">
+    <name>ВидЗанятости</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>EnumRef.ВидыЗанятости</type>
+        </types>
+      </typeExtension>
+    </extension>
+    <type/>
+  </resources>
+  <dimensions uuid="378913ea-959f-4527-b43a-c15557a78057" extendedConfigurationObject="f069b975-9037-4c96-8ce9-fcaf50df5731">
+    <name>ФизическоеЛицо</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>CatalogRef.ФизическиеЛица</type>
+        </types>
+      </typeExtension>
+    </extension>
+    <type/>
+  </dimensions>
+  <dimensions uuid="dc0cc3d5-90e0-4f0c-bac7-20e6777e63d1" extendedConfigurationObject="9a4fae71-7fda-411b-8e57-8eeab0d3c08c">
+    <name>Сотрудник</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>CatalogRef.Сотрудники</type>
+        </types>
+      </typeExtension>
+    </extension>
+    <type/>
+  </dimensions>
+</mdclass:InformationRegister>

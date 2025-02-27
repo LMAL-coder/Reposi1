@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Report xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="eba6ab05-7f90-4780-b1f1-5ab2ce91d2d4">
+  <producedTypes>
+    <objectType typeId="014bd79f-21f0-481c-8a91-5cdae3c4de8d" valueTypeId="936b41a5-637c-4d3b-816f-325456d1d74d"/>
+    <managerType typeId="69a9aa8a-cf2d-4f8c-bc10-db7972a08b98" valueTypeId="9afefa98-7513-48c6-99e5-51209d524261"/>
+  </producedTypes>
+  <name>СравнениеНачисленийУУиЮУ</name>
+  <synonym>
+    <key>ru</key>
+    <value>Сравнение начислений УУ и ЮУ</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>Report.СравнениеНачисленийУУиЮУ.Form.ФормаОтчета</defaultForm>
+  <mainDataCompositionSchema>Report.СравнениеНачисленийУУиЮУ.Template.ОсновнаяСхемаКомпоновкиДанных</mainDataCompositionSchema>
+  <extendedPresentation>
+    <key>ru</key>
+    <value>СравнениеНачисленийУУиЮУ</value>
+  </extendedPresentation>
+  <forms uuid="5efaa73b-36bc-458b-aede-76220d32b464">
+    <name>ФормаОтчета</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма отчета</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="fc784be0-20e8-45bb-a978-d0eaa45ed89c">
+    <name>ОсновнаяСхемаКомпоновкиДанных</name>
+    <synonym>
+      <key>ru</key>
+      <value>Основная схема компоновки данных</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+</mdclass:Report>

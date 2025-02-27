@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Subsystem xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="5bf2ba56-82d4-4e24-902b-8ab92b96a55f">
+  <name>РасчетЗППоАптекам</name>
+  <synonym>
+    <key>ru</key>
+    <value>Расчет ЗП по аптекам</value>
+  </synonym>
+  <includeHelpInContents>true</includeHelpInContents>
+  <includeInCommandInterface>true</includeInCommandInterface>
+  <content>InformationRegister.ДифференциацияБонусаПоСети</content>
+  <content>Document.ВводДанныхПоАптеке</content>
+  <content>Enum.ВидыПремий</content>
+  <content>InformationRegister.ДПО_ПоказателиПремий</content>
+  <content>InformationRegister.ДанныеПоАптекам</content>
+  <content>DataProcessor.РасчетЗарплатыПоАптеке</content>
+  <content>Document.Аптека_НачислениеЗарплаты</content>
+  <content>Enum.ВидыСтатусов</content>
+  <content>InformationRegister.НачисленияЗППоАптекам</content>
+  <content>InformationRegister.ПоказателиПоДолжностям</content>
+  <content>Report.СводнаяВедомостьПоАптекам</content>
+  <content>InformationRegister.ПределыПремий</content>
+  <content>InformationRegister.АкцииПоАптекам</content>
+  <content>InformationRegister.ЗГ_РазрядыКатегорииДолжностейСтоимость</content>
+  <content>Report.ЗГ_ОтчетПоУдержаниям</content>
+  <content>Document.ВводДанныхПоАИА</content>
+  <content>Document.Аптека_НачислениеЗарплатыАИА</content>
+  <content>Document.ВводДанныхВрачи</content>
+  <content>Document.Аптека_НачислениеЗарплатыВрачи</content>
+  <content>Document.Аптека_НачислениеЗарплаты_Итог</content>
+  <content>Document.ЗГ_ВводУдержанийСотрудников</content>
+  <content>Report.РасчетныйЛистПоФизЛицу</content>
+  <content>Report.ДанныеПоАптекам</content>
+  <content>Report.ОтчетВводДанныхПоАптекам</content>
+  <content>InformationRegister.НачисленияЗППоАптекамЗУП</content>
+  <content>Report.РасчетныйЛистПоАптеке</content>
+  <content>Report.СравнениеТабелейУУиЮУ</content>
+  <content>Report.СводнаяВедомостьПоАптекам2</content>
+  <content>Report.СравнениеНачисленийКОРПиЗУП</content>
+  <content>Report.ОтчетПродажиСотрудников</content>
+  <content>InformationRegister.ПоказателиВесГраница</content>
+  <content>InformationRegister.ПланыВыручкиПоАптекам</content>
+  <content>Document.Аптека_НачислениеЗарплатыЗавед</content>
+  <content>Document.ПланыВыручкиПоАптекам</content>
+  <content>InformationRegister.ПоказателиЗавед</content>
+  <content>Report.РасчетныйЛистПоЗаведующим</content>
+</mdclass:Subsystem>

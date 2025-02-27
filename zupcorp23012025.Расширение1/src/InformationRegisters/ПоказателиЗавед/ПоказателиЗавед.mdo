@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="cd9bc3d2-e55f-4148-9b15-ac815694bb15">
+  <producedTypes>
+    <selectionType typeId="75d37539-8049-498e-9949-43c60c843d40" valueTypeId="d1460722-82d8-4524-8f3a-ed6e62b4cee9"/>
+    <listType typeId="4118bad4-2c3f-4df8-b83f-ffb54794989d" valueTypeId="00cf3cd4-ee4c-4e8a-b6dd-915585cd8bd2"/>
+    <managerType typeId="a7483202-d778-43b1-80ae-8ff4bf502636" valueTypeId="29956e75-94f0-4fa9-9c59-a7ea916307fa"/>
+    <recordSetType typeId="b5c95707-9104-47a4-88a6-a1b5bfaa7cc2" valueTypeId="c9ffd197-b96c-40b7-816d-88d1a2ad86ea"/>
+    <recordKeyType typeId="d0c56be9-e947-4cfa-8bb2-9b5d6e7b1d2a" valueTypeId="f8017d91-3310-488e-86a0-41462805e5fc"/>
+    <recordType typeId="20342010-054d-4367-bfe3-475a4713d485" valueTypeId="ff1b5085-2294-45a5-a395-f2adc98204c1"/>
+    <recordManagerType typeId="58fdaa7e-e81e-45af-b162-f6422eeb081e" valueTypeId="b0444877-c237-498b-b040-11db24f6a98e"/>
+  </producedTypes>
+  <name>ПоказателиЗавед</name>
+  <synonym>
+    <key>ru</key>
+    <value>Показатели завед</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <informationRegisterPeriodicity>Day</informationRegisterPeriodicity>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="002d5f08-fda4-48fc-a830-069e45f4df25">
+    <name>ДоплатаЗаОптику</name>
+    <synonym>
+      <key>ru</key>
+      <value>Доплата за оптику</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="3316f824-1116-47f7-85a4-4166da93f8a9">
+    <name>ДоплатаЗаКабинетВрача</name>
+    <synonym>
+      <key>ru</key>
+      <value>Доплата за кабинет врача</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="88207af1-a5db-465c-8524-a468dac010db">
+    <name>Оклад</name>
+    <synonym>
+      <key>ru</key>
+      <value>Оклад</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="d3126c4d-4ea1-44c0-8b63-4511f64f8326">
+    <name>KPIСтавка</name>
+    <synonym>
+      <key>ru</key>
+      <value>KPIСтавка</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="e498d362-09e6-4c79-b3c9-61843b524b73">
+    <name>MIN</name>
+    <synonym>
+      <key>ru</key>
+      <value>MIN</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="755710b0-b34e-4a06-82c1-8ca5ed995dea">
+    <name>MAX</name>
+    <synonym>
+      <key>ru</key>
+      <value>MAX</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="1a380440-b1a5-407e-8cdf-c93d5a82fe5b">
+    <name>КоличествоАптек</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количество аптек</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

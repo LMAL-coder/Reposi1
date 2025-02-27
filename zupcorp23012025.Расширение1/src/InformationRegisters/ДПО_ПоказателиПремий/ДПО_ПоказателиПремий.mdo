@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="f00a11ad-d889-47d2-b023-7028f78c43ef">
+  <producedTypes>
+    <selectionType typeId="bac686cf-7327-40b8-8416-db9d6ff3101f" valueTypeId="95f535b6-e7ae-4e4d-8cd8-25a127be732b"/>
+    <listType typeId="e379049a-5dda-4954-8564-b70ac14c4d11" valueTypeId="5c364423-5af5-4301-891e-6a40ee6c5324"/>
+    <managerType typeId="713036c9-9cff-48bd-bf34-99eaa9d75344" valueTypeId="b932cdef-9a0e-4b1f-ad3f-999cc16ba90e"/>
+    <recordSetType typeId="c8f7c4f6-10ab-407a-abc9-42a5c7dbe00b" valueTypeId="ae20a7cf-25aa-4e21-892a-2a7b786ebe47"/>
+    <recordKeyType typeId="0ff49d40-4e1f-4828-95ab-fbb99ef6b4dc" valueTypeId="40d81dfc-b188-4eae-ae8e-34f70dd4ec13"/>
+    <recordType typeId="7cce0a2b-717f-45f8-9581-f8d17f05fabc" valueTypeId="8080770b-e177-474c-9046-a08e74717831"/>
+    <recordManagerType typeId="e81c84d3-26ea-42d4-94d6-28b2f652e3b0" valueTypeId="5043f56b-f3c8-4108-ba3a-8ce1c880e57d"/>
+  </producedTypes>
+  <name>ДПО_ПоказателиПремий</name>
+  <synonym>
+    <key>ru</key>
+    <value>Показатели премий</value>
+  </synonym>
+  <dataHistory>Use</dataHistory>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <informationRegisterPeriodicity>Day</informationRegisterPeriodicity>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="fd25ef90-4e61-4dfa-a2e7-72fd81079e0a">
+    <name>ВеличинаПремии</name>
+    <synonym>
+      <key>ru</key>
+      <value>Величина премии</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="1b3e96ad-978a-464f-a562-938dca041a6b">
+    <name>ВидыПремий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Виды премий</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ВидыПремий</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="427da7c8-22d2-40c0-8a43-e2575deaf11e">
+    <name>ДиапазонС</name>
+    <synonym>
+      <key>ru</key>
+      <value>Диапазон С</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="9bb8d81c-078a-4812-a286-a957bc09cdba">
+    <name>ДиапазонПо</name>
+    <synonym>
+      <key>ru</key>
+      <value>Диапазон по</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="e4576c02-238c-458d-b5e8-078f2c2466f9">
+  <name>ЗГ_ЗППроцедурыИФункцииСервер</name>
+  <synonym>
+    <key>ru</key>
+    <value>З г ЗППроцедуры и функции сервер</value>
+  </synonym>
+  <server>true</server>
+</mdclass:CommonModule>

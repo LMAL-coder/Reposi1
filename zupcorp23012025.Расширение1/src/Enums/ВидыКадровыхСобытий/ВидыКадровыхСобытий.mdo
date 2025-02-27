@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Enum xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="fec8fcb5-7eba-4214-9846-12a1586ee942" extendedConfigurationObject="b2c547fd-343e-4bc1-9763-795b28132ed4">
+  <producedTypes>
+    <refType typeId="66f1054f-8b5f-42c6-861e-093a148441f3" valueTypeId="74629d81-390c-478e-b006-2006d9c4ecad"/>
+    <listType typeId="fb3756d9-6db9-4a10-904a-b3a13f1f34a0" valueTypeId="34550c80-895e-44a4-b33e-a33478cc730e"/>
+    <managerType typeId="e1809783-9e31-4f20-aea1-447364a182ac" valueTypeId="07737dc8-879c-4fca-b5a9-10694190834c"/>
+  </producedTypes>
+  <name>ВидыКадровыхСобытий</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:EnumExtension">
+    <extendedConfigurationObject>Checked</extendedConfigurationObject>
+  </extension>
+  <enumValues uuid="96f047e6-e932-4b24-a0b6-93024d7d852f" extendedConfigurationObject="20908286-45be-433e-b33d-fc9b1619f433">
+    <name>Увольнение</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:MdObjectExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+    </extension>
+  </enumValues>
+</mdclass:Enum>

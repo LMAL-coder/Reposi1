@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="778e1422-d951-433a-ab2a-ca7655dc1310" extendedConfigurationObject="6404dfef-c217-4347-b814-e72438dae9f6">
+  <producedTypes>
+    <selectionType typeId="79918bb2-cd77-47be-a455-b4c3289af2bd" valueTypeId="c038269d-3f09-4d37-9d0e-e57244771856"/>
+    <listType typeId="1150e0cf-711c-48e5-9c7d-c5428c78f415" valueTypeId="29d047c0-0fbf-4adb-a2d1-6fd9536d2467"/>
+    <managerType typeId="7f7110bd-d6e4-48ea-abd5-fc2e4de2f72b" valueTypeId="8490196b-b1c3-4810-b622-33d7b5271fe4"/>
+    <recordSetType typeId="2c5b1a1c-ec52-4ed0-b08c-f76733e9bba5" valueTypeId="99051c06-fd20-485d-abc2-666d18c078e4"/>
+    <recordKeyType typeId="82f71f1b-34be-4835-9c24-e6385c5a9565" valueTypeId="a03eafa1-2da6-4659-9a74-49b9603a910f"/>
+    <recordType typeId="82886ccd-4ad8-4621-a01a-27b45366c2cf" valueTypeId="8ae88241-5cb6-4529-b835-c70ecf3f200e"/>
+    <recordManagerType typeId="7b859624-730a-4c38-9839-bf952cc46652" valueTypeId="6cb0fce8-4fab-4303-8fdd-058990161ca8"/>
+  </producedTypes>
+  <name>ДанныеПроизводственногоКалендаряПомесячно</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:InformationRegisterExtension">
+    <extendedConfigurationObject>Checked</extendedConfigurationObject>
+    <informationRegisterPeriodicity>Checked</informationRegisterPeriodicity>
+    <writeMode>Checked</writeMode>
+  </extension>
+  <resources uuid="c91f6248-cfd1-4423-98b1-be0948df7497" extendedConfigurationObject="ec7d9360-8ddc-4338-accb-33655cd884e8">
+    <name>РабочихДней</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>Number</type>
+        </types>
+        <numberQualifiers>
+          <precision>5</precision>
+        </numberQualifiers>
+      </typeExtension>
+    </extension>
+    <type/>
+  </resources>
+  <dimensions uuid="e5757c4e-d509-45b9-b96f-22a48e423040" extendedConfigurationObject="60477b3b-dc2b-4612-a865-573b2a8261f0">
+    <name>Год</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>Number</type>
+        </types>
+        <numberQualifiers>
+          <precision>4</precision>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </typeExtension>
+    </extension>
+    <type/>
+  </dimensions>
+  <dimensions uuid="91ca7de3-fc14-49d4-a295-eddf4c854453" extendedConfigurationObject="4ae09e72-c0e0-4235-94e2-1afbd9cf3450">
+    <name>Месяц</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>Date</type>
+        </types>
+        <dateQualifiers>
+          <dateFractions>Date</dateFractions>
+        </dateQualifiers>
+      </typeExtension>
+    </extension>
+    <type/>
+  </dimensions>
+</mdclass:InformationRegister>

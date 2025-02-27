@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Role xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="d3997ee6-99e7-4949-945f-f8cba755fe18">
+  <name>Подсистема_Отель</name>
+  <synonym>
+    <key>ru</key>
+    <value>Подсистема отель</value>
+  </synonym>
+</mdclass:Role>

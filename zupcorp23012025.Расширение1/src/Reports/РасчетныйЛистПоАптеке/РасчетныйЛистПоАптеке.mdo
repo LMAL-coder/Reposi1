@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Report xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="9cf1cb17-ccd9-4aa0-b287-afc59d533c62">
+  <producedTypes>
+    <objectType typeId="69a3d73f-6f9f-4c48-ba03-ed4598023c9e" valueTypeId="4a3db5e9-7adc-49be-8b92-15a8a1220686"/>
+    <managerType typeId="6d445dc8-f5cf-43fa-b997-702f3f4e10fb" valueTypeId="5ffa4584-c74c-4454-99a3-09b362808892"/>
+  </producedTypes>
+  <name>РасчетныйЛистПоАптеке</name>
+  <synonym>
+    <key>ru</key>
+    <value>Расчетный лист по аптеке</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>Report.РасчетныйЛистПоАптеке.Form.ФормаОтчета</defaultForm>
+  <mainDataCompositionSchema>Report.РасчетныйЛистПоАптеке.Template.ОсновнаяСхемаКомпоновкиДанных</mainDataCompositionSchema>
+  <forms uuid="5cb7433d-5f8d-40cd-8bd6-710e2e1fca36">
+    <name>ФормаОтчета</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма отчета</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="96f33243-cebe-4eeb-8688-7819be5a229c">
+    <name>ОсновнаяСхемаКомпоновкиДанных</name>
+    <synonym>
+      <key>ru</key>
+      <value>Основная схема компоновки данных</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+</mdclass:Report>

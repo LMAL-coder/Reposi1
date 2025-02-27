@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="cd5a8c30-65a8-47b8-929b-e15dd45280d1">
+  <producedTypes>
+    <selectionType typeId="3f39c2b9-27f0-4d13-8901-d4d75b345d65" valueTypeId="0840aa51-f2fd-4614-b155-e7914e5b87cc"/>
+    <listType typeId="659a41d9-8ce0-4d6a-a735-0e1f9a388288" valueTypeId="b948a0a1-1216-4141-bb6a-0a02adf8e6ee"/>
+    <managerType typeId="79430eb3-77e9-400c-9d11-f26bb5e7cc30" valueTypeId="c8f55cff-cae2-4330-bd46-4dc74703af4c"/>
+    <recordSetType typeId="3705bd67-a0d4-48fb-91eb-50b11f0468aa" valueTypeId="954eb334-d702-4d4b-90dc-cf12c97ef46b"/>
+    <recordKeyType typeId="369abfd9-a912-4da7-8919-51e5b57cbbf0" valueTypeId="2c784a9d-18ea-4c4d-943d-27771dbcb01c"/>
+    <recordType typeId="0453dbdd-3364-4ae6-9717-b261081a7cfc" valueTypeId="53c60b62-0a3d-463e-9aad-b6e6f96dde3a"/>
+    <recordManagerType typeId="a8387fd4-3d42-4a38-a0a1-782fee119fe5" valueTypeId="a17ff925-eaa0-451a-a977-22039484c98e"/>
+  </producedTypes>
+  <name>ПоказателиОтель</name>
+  <synonym>
+    <key>ru</key>
+    <value>Показатели отель</value>
+  </synonym>
+  <dataHistory>Use</dataHistory>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <informationRegisterPeriodicity>Day</informationRegisterPeriodicity>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="e16ca86a-8aae-4e97-910a-a1ab98ad42d8">
+    <name>Коэффициент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Коэффициент</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="9966b5d6-1829-4e4e-b2c8-8325cf594b39">
+    <name>СтоимостьДневногоЧаса</name>
+    <synonym>
+      <key>ru</key>
+      <value>Стоимость дневного часа</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="72828271-4dae-47a4-925d-96307994d295">
+    <name>СтоимостьНочногоЧаса</name>
+    <synonym>
+      <key>ru</key>
+      <value>Стоимость ночного часа</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="17f36f27-8855-4a8b-96de-bf223b16c05f">
+    <name>СтоимостьЧасаKPI</name>
+    <synonym>
+      <key>ru</key>
+      <value>Стоимость часа KPI</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="b133a216-f5ac-4ebd-b30c-474c141cfda0">
+    <name>Должность</name>
+    <synonym>
+      <key>ru</key>
+      <value>Должность</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Должности</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="5de19a47-198b-401f-8527-1332eaf92436">
+    <name>КатегорияСотрудник</name>
+    <synonym>
+      <key>ru</key>
+      <value>Категория сотрудник</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.РазрядыКатегорииДолжностей</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

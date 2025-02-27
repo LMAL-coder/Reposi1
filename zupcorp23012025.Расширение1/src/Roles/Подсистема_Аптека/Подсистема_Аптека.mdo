@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Role xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="fc0be955-bd8c-4e7c-9746-680b9e15d6a8">
+  <name>Подсистема_Аптека</name>
+  <synonym>
+    <key>ru</key>
+    <value>Подсистема аптека</value>
+  </synonym>
+</mdclass:Role>

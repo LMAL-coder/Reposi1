@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Report xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="93e02122-9a40-421e-85a4-2beb20e9cb6b">
+  <producedTypes>
+    <objectType typeId="019a9a0a-2929-4ca5-bb7e-9ea815a34821" valueTypeId="7d8e259a-8d98-47ec-bcda-4725d8926390"/>
+    <managerType typeId="5c26761c-7bdc-42ad-aa87-65e83efb29b3" valueTypeId="7248990a-1984-4f01-95f4-68bc88716e95"/>
+  </producedTypes>
+  <name>СводнаяВедомостьПоАптекам</name>
+  <synonym>
+    <key>ru</key>
+    <value>Сводная ведомость по аптекам</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>Report.СводнаяВедомостьПоАптекам.Form.ФормаОтчета</defaultForm>
+  <variantsStorage>SettingsStorage.ХранилищеВариантовОтчетов</variantsStorage>
+  <attributes uuid="895684c4-6c6e-40e2-ac4d-924f302b4cb0">
+    <name>ДатаС</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата С</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="c2045d35-cb7a-4b0b-9b9b-2a474ae852ca">
+    <name>ДатаПо</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата по</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="d5f5c028-480c-4c65-b744-75ae5552124a">
+    <name>Подразделения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подразделения</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ПодразделенияОрганизаций</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <forms uuid="453bd859-a1d7-44f9-9e3b-28be17b03c8f">
+    <name>ФормаОтчета</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма отчета</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="03050118-2351-40a3-b001-2011b4659c17">
+    <name>Макет</name>
+    <synonym>
+      <key>ru</key>
+      <value>Макет</value>
+    </synonym>
+  </templates>
+</mdclass:Report>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Report xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="deb1da10-5d22-400f-a364-f0572d1cd0b5">
+  <producedTypes>
+    <objectType typeId="1972bb21-cbc4-4bc8-9702-dea7e57e51ff" valueTypeId="5eac03cb-38a6-4402-98ff-ac55d6f869de"/>
+    <managerType typeId="b222bbe7-fdba-471e-a896-02c1a7d53385" valueTypeId="7ca140de-3213-4053-b455-22441dede2a6"/>
+  </producedTypes>
+  <name>ДанныеПоАптекам</name>
+  <synonym>
+    <key>ru</key>
+    <value>Данные по аптекам</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <mainDataCompositionSchema>Report.ДанныеПоАптекам.Template.ОсновнаяСхемаКомпоновкиДанных</mainDataCompositionSchema>
+  <templates uuid="d2c4162b-a990-4e5d-9f26-b7cc320f8dc8">
+    <name>ОсновнаяСхемаКомпоновкиДанных</name>
+    <synonym>
+      <key>ru</key>
+      <value>Основная схема компоновки данных</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+</mdclass:Report>

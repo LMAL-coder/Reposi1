@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:SettingsStorage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="deaa0905-cc89-49ca-a232-534f3805fb42" extendedConfigurationObject="14512818-58b0-44cc-b00d-d37913c57aad">
+  <producedTypes>
+    <managerType typeId="20240e1d-27d9-4275-a15c-9344efa8303f" valueTypeId="b6c010bc-b7b2-408c-9ed6-40061c71de19"/>
+  </producedTypes>
+  <name>ХранилищеВариантовОтчетов</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:SettingsStorageExtension">
+    <extendedConfigurationObject>Checked</extendedConfigurationObject>
+  </extension>
+</mdclass:SettingsStorage>

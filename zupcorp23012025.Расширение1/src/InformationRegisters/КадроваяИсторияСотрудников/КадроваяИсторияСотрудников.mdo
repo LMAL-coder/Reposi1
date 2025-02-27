@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="ff8a7134-7444-4c38-af44-720fc1cd683a" extendedConfigurationObject="77549c2a-a84b-49d6-8f15-86c632de6a12">
+  <producedTypes>
+    <selectionType typeId="a8783561-2bd9-4842-ac7f-630d3c47f50d" valueTypeId="313b3ca4-08a5-4f36-a566-82c286ca5f21"/>
+    <listType typeId="5c0ac529-c2f8-4f55-a402-39303c7b2397" valueTypeId="bc08d8f1-7f1e-45e8-8218-6abab67a8124"/>
+    <managerType typeId="dcec2bde-647f-406f-886d-94469f7efb20" valueTypeId="3d91c815-9867-4c79-a8e8-b70cb3256de8"/>
+    <recordSetType typeId="d2f57403-8a9d-4be4-9ddb-87ab8d212071" valueTypeId="591237f4-598b-4324-98aa-818508d1521b"/>
+    <recordKeyType typeId="cfe8bc5c-54f2-4a27-baf5-af1a11078483" valueTypeId="6bd240bb-90b4-405c-8696-25ba85cb51df"/>
+    <recordType typeId="a72c6d82-279b-4447-bc04-470dd2c02e46" valueTypeId="f7e11cd6-ac85-417c-b0c3-5fe8d17a1cb7"/>
+    <recordManagerType typeId="9fc857ea-89c2-40a4-92a1-6361413f3fa9" valueTypeId="21d92564-a0a4-4fe5-8899-2772b7aed667"/>
+  </producedTypes>
+  <name>КадроваяИсторияСотрудников</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:InformationRegisterExtension">
+    <extendedConfigurationObject>Checked</extendedConfigurationObject>
+    <informationRegisterPeriodicity>Checked</informationRegisterPeriodicity>
+    <writeMode>Checked</writeMode>
+  </extension>
+  <informationRegisterPeriodicity>Second</informationRegisterPeriodicity>
+  <writeMode>RecorderSubordinate</writeMode>
+  <resources uuid="ffea8200-3e18-442d-bdc4-865235e31527" extendedConfigurationObject="a0d8999d-f931-45ef-b8e5-8b7627be9a55">
+    <name>Подразделение</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>CatalogRef.ПодразделенияОрганизаций</type>
+        </types>
+      </typeExtension>
+    </extension>
+    <type/>
+  </resources>
+  <resources uuid="4618bc4d-2de4-4bc1-8f63-ca7bbf2be381" extendedConfigurationObject="b1514e03-58a3-4ab5-adb3-0c489937f078">
+    <name>Должность</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>CatalogRef.Должности</type>
+        </types>
+      </typeExtension>
+    </extension>
+    <type/>
+  </resources>
+  <dimensions uuid="63c77776-dcc8-4cd7-b730-dfa27bd7e802" extendedConfigurationObject="92f56107-7440-44c8-9707-cf490d1c0f52">
+    <name>Сотрудник</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>CatalogRef.Сотрудники</type>
+        </types>
+      </typeExtension>
+    </extension>
+    <type/>
+  </dimensions>
+  <dimensions uuid="708f9316-ee45-4bb0-a964-6e5e2cb99599" extendedConfigurationObject="8768e276-1e30-4c3b-88f5-62c831a80dea">
+    <name>ФизическоеЛицо</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>CatalogRef.ФизическиеЛица</type>
+        </types>
+      </typeExtension>
+    </extension>
+    <type/>
+  </dimensions>
+</mdclass:InformationRegister>

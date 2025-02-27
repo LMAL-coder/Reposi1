@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonPicture xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="4e49c754-a01b-4826-bfb7-8cede52dfbf2">
+  <name>КнопкаКалендаря</name>
+  <synonym>
+    <key>ru</key>
+    <value>Кнопка календаря</value>
+  </synonym>
+</mdclass:CommonPicture>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="87158d27-17fd-4d41-bb9f-75e6494fd22c">
+  <name>Расширение1</name>
+  <synonym>
+    <key>ru</key>
+    <value>Расширение1</value>
+  </synonym>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:ConfigurationExtension">
+    <defaultRunMode>Checked</defaultRunMode>
+    <usePurposes>Checked</usePurposes>
+    <defaultLanguage>Checked</defaultLanguage>
+    <interfaceCompatibilityMode>Checked</interfaceCompatibilityMode>
+    <defaultRoles>Extended</defaultRoles>
+  </extension>
+  <containedObjects classId="9cd510cd-abfc-11d4-9434-004095e12fc7" objectId="7ef52c71-91ed-44e7-af7f-cafde11c2610"/>
+  <containedObjects classId="9fcd25a0-4822-11d4-9414-008048da11f9" objectId="ca9a5fef-501e-43cf-9752-decb7b2dc615"/>
+  <containedObjects classId="e3687481-0a87-462c-a166-9f34594f9bba" objectId="00276f2a-5212-4c39-a601-155764671b70"/>
+  <containedObjects classId="9de14907-ec23-4a07-96f0-85521cb6b53b" objectId="a20ab3a3-9005-4ab4-b5df-3fade4078a39"/>
+  <containedObjects classId="51f2d5d8-ea4d-4064-8892-82951750031e" objectId="8568abdf-fec3-41cf-a40a-9d455a79779d"/>
+  <containedObjects classId="e68182ea-4237-4383-967f-90c1e3370bc7" objectId="39eb038a-be33-4579-b6f5-e5e70881457c"/>
+  <containedObjects classId="fb282519-d103-4dd3-bc12-cb271d631dfc" objectId="cbf6d02e-cda8-4c11-a99c-ae233eba7827"/>
+  <keepMappingToExtendedConfigurationObjectsByIDs>true</keepMappingToExtendedConfigurationObjectsByIDs>
+  <namePrefix>Расш1_</namePrefix>
+  <configurationExtensionCompatibilityMode>8.3.17</configurationExtensionCompatibilityMode>
+  <configurationExtensionPurpose>Customization</configurationExtensionPurpose>
+  <defaultRunMode>ManagedApplication</defaultRunMode>
+  <usePurposes>PersonalComputer</usePurposes>
+  <scriptVariant>Russian</scriptVariant>
+  <defaultRoles>Role.Подсистема_Аптека</defaultRoles>
+  <defaultLanguage>Language.Русский</defaultLanguage>
+  <interfaceCompatibilityMode>TaxiEnableVersion8_2</interfaceCompatibilityMode>
+  <compatibilityMode>8.3.24</compatibilityMode>
+  <languages uuid="7f233843-80ad-4df0-9f2b-376a381b4e2c" extendedConfigurationObject="6ec41672-ca59-40aa-a4cf-3fef74cdc3c6">
+    <name>Русский</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:LanguageExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <languageCode>Checked</languageCode>
+    </extension>
+    <languageCode>ru</languageCode>
+  </languages>
+  <subsystems>Subsystem.РасчетЗППоАптекам</subsystems>
+  <subsystems>Subsystem.РасчетЗПОтель</subsystems>
+  <commonPictures>CommonPicture.КнопкаКалендаря</commonPictures>
+  <roles>Role.Подсистема_Аптека</roles>
+  <roles>Role.СтатусЗавершено</roles>
+  <roles>Role.ЗГ_НачислениеЗП</roles>
+  <roles>Role.ПолныеПрава</roles>
+  <roles>Role.Подсистема_Отель</roles>
+  <roles>Role.ЗГ_НачисленияЗП_Настройки</roles>
+  <commonModules>CommonModule.ОбработкаДатыВыбора</commonModules>
+  <commonModules>CommonModule.ОбщегоНазначенияКлиентСервер1</commonModules>
+  <commonModules>CommonModule.СтроковыеФункцииКлиентСервер1</commonModules>
+  <commonModules>CommonModule.ОбработкаДатыВыбораКлиентСервер</commonModules>
+  <commonModules>CommonModule.ОбщегоНазначенияКлиент1</commonModules>
+  <commonModules>CommonModule.ЗГ_ЗППроцедурыИФункцииСервер</commonModules>
+  <settingsStorages>SettingsStorage.ХранилищеВариантовОтчетов</settingsStorages>
+  <commonForms>CommonForm.ВыборПериода1</commonForms>
+  <catalogs>Catalog.ПодразделенияОрганизаций</catalogs>
+  <catalogs>Catalog.Должности</catalogs>
+  <catalogs>Catalog.Сотрудники</catalogs>
+  <catalogs>Catalog.ФизическиеЛица</catalogs>
+  <catalogs>Catalog.ТарифныеСтавки</catalogs>
+  <catalogs>Catalog.РазрядыКатегорииДолжностей</catalogs>
+  <documents>Document.ВводДанныхПоАптеке</documents>
+  <documents>Document.Аптека_НачислениеЗарплаты</documents>
+  <documents>Document.Увольнение</documents>
+  <documents>Document.ВводДанныхПоАИА</documents>
+  <documents>Document.ВводДанныхОтель</documents>
+  <documents>Document.Отель_НачислениеЗарплаты</documents>
+  <documents>Document.ЗГ_ВводУдержанийСотрудников</documents>
+  <documents>Document.Аптека_НачислениеЗарплатыАИА</documents>
+  <documents>Document.ВводДанныхВрачи</documents>
+  <documents>Document.Аптека_НачислениеЗарплатыВрачи</documents>
+  <documents>Document.Аптека_НачислениеЗарплаты_Итог</documents>
+  <documents>Document.Аптека_НачислениеЗарплатыЗавед</documents>
+  <documents>Document.ПланыВыручкиПоАптекам</documents>
+  <enums>Enum.ВидыПремий</enums>
+  <enums>Enum.ВидыОценок</enums>
+  <enums>Enum.ВидыСтатусов</enums>
+  <enums>Enum.ВидыПоказателей</enums>
+  <enums>Enum.ВидыКадровыхСобытий</enums>
+  <enums>Enum.ВидыДоговоровССотрудниками</enums>
+  <enums>Enum.ВидыЗанятости</enums>
+  <enums>Enum.ВидыДнейПроизводственногоКалендаря</enums>
+  <reports>Report.СводнаяВедомостьПоАптекам</reports>
+  <reports>Report.ЗГ_ОтчетПоУдержаниям</reports>
+  <reports>Report.РасчетныйЛистПоФизЛицу</reports>
+  <reports>Report.ДанныеПоАптекам</reports>
+  <reports>Report.ОтчетВводДанныхПоАптекам</reports>
+  <reports>Report.РасчетныйЛистПоАптеке</reports>
+  <reports>Report.СравнениеТабелейУУиЮУ</reports>
+  <reports>Report.СводнаяВедомостьПоАптекам2</reports>
+  <reports>Report.РасчетныйЛистПоАптеке1</reports>
+  <reports>Report.СравнениеНачисленийУУиЮУ</reports>
+  <reports>Report.СравнениеНачисленийКОРПиЗУП</reports>
+  <reports>Report.ОтчетПродажиСотрудников</reports>
+  <reports>Report.РасчетныйЛистПоЗаведующим</reports>
+  <dataProcessors>DataProcessor.РасчетЗарплатыПоАптеке</dataProcessors>
+  <informationRegisters>InformationRegister.ДифференциацияБонусаПоСети</informationRegisters>
+  <informationRegisters>InformationRegister.ДПО_ПоказателиПремий</informationRegisters>
+  <informationRegisters>InformationRegister.ДанныеПоАптекам</informationRegisters>
+  <informationRegisters>InformationRegister.НачисленияЗППоАптекам</informationRegisters>
+  <informationRegisters>InformationRegister.ПоказателиПоДолжностям</informationRegisters>
+  <informationRegisters>InformationRegister.ПределыПремий</informationRegisters>
+  <informationRegisters>InformationRegister.АкцииПоАптекам</informationRegisters>
+  <informationRegisters>InformationRegister.ЗГ_РазрядыКатегорииДолжностейСтоимость</informationRegisters>
+  <informationRegisters>InformationRegister.ПоказателиВесГраница</informationRegisters>
+  <informationRegisters>InformationRegister.ПоказателиОтель</informationRegisters>
+  <informationRegisters>InformationRegister.КадроваяИсторияСотрудников</informationRegisters>
+  <informationRegisters>InformationRegister.КадроваяИсторияСотрудниковИнтервальный</informationRegisters>
+  <informationRegisters>InformationRegister.ВидыЗанятостиСотрудников</informationRegisters>
+  <informationRegisters>InformationRegister.НачисленияЗППоАптекамЗУП</informationRegisters>
+  <informationRegisters>InformationRegister.ПланыВыручкиПоАптекам</informationRegisters>
+  <informationRegisters>InformationRegister.ПоказателиЗавед</informationRegisters>
+  <informationRegisters>InformationRegister.ДанныеПроизводственногоКалендаряПомесячно</informationRegisters>
+  <accumulationRegisters>AccumulationRegister.ЗГ_УдержанияСотрудниковОрганизации</accumulationRegisters>
+</mdclass:Configuration>

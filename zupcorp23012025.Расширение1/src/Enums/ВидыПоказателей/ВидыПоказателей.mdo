@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Enum xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="4d74634c-dd16-4cdd-9d12-21e1dfc32af6">
+  <producedTypes>
+    <refType typeId="c9972781-8909-4143-983d-165101dbc998" valueTypeId="e6686dc3-6beb-430f-87b0-4e2b899fb362"/>
+    <listType typeId="4c9285eb-12be-4aee-b5e4-187fc3897fed" valueTypeId="efec2eff-650b-46d0-a14d-6affa155014d"/>
+    <managerType typeId="7000e048-48de-4cf5-abda-9c19cdd8ddb8" valueTypeId="582f79a7-1935-4b69-855b-829f89e1044f"/>
+  </producedTypes>
+  <name>ВидыПоказателей</name>
+  <synonym>
+    <key>ru</key>
+    <value>Виды показателей</value>
+  </synonym>
+  <quickChoice>true</quickChoice>
+  <choiceMode>BothWays</choiceMode>
+  <enumValues uuid="a7f6f4b8-93fc-4f64-9408-d63ce8e585f7">
+    <name>АдминистраторЭффективностьДеятельности</name>
+    <synonym>
+      <key>ru</key>
+      <value>Администратор эффективность деятельности</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="811953ae-b391-4868-9036-98e1d1221ba6">
+    <name>АдминистраторРаботаСПрограммой</name>
+    <synonym>
+      <key>ru</key>
+      <value>Администратор работа с программой</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="ae4e05fb-4973-413c-918c-9bd00598320b">
+    <name>АдминистраторСамостоятельностьОтветственность</name>
+    <synonym>
+      <key>ru</key>
+      <value>Администратор самостоятельность ответственность</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="ae2d3eef-8200-4431-a0c7-740f1034e22c">
+    <name>АдминистраторДисциплинированность</name>
+    <synonym>
+      <key>ru</key>
+      <value>Администратор дисциплинированность</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="2f7c4259-9462-4135-b7b6-955abd1b456a">
+    <name>АдминистраторВыполениеПлана</name>
+    <synonym>
+      <key>ru</key>
+      <value>Администратор выполение плана</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="31a62f7f-afd9-49e0-ad67-00ae6c6d1634">
+    <name>АдминистраторКачественныйПоказатель</name>
+    <synonym>
+      <key>ru</key>
+      <value>Администратор качественный показатель</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="57667cd2-cfe0-42e5-b418-ea488eb5adb5">
+    <name>ГорничнаяКачественныйПоказатель</name>
+    <synonym>
+      <key>ru</key>
+      <value>Горничная качественный показатель</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="70cd8293-4444-4045-bf88-2683b9ddb21a">
+    <name>ЗаведВыполнениеПланаПоВыручке</name>
+    <synonym>
+      <key>ru</key>
+      <value>Завед выполнение плана по выручке</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="3774e588-0124-43bd-8c99-40b22c307e07">
+    <name>ЗаведПриростВыручки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Завед прирост выручки</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="44e92e3f-858b-415b-9800-3f55a83d4f44">
+    <name>ЗаведВыполнениеПланаПоВыручкеОптики</name>
+    <synonym>
+      <key>ru</key>
+      <value>Завед выполнение плана по выручке оптики</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="c8c55a5e-c9ad-4d9b-ad9e-e2dafb80ed43">
+    <name>ЗаведКТЗБезОптики</name>
+    <synonym>
+      <key>ru</key>
+      <value>Завед КТЗБез оптики</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="84c77a97-56e3-44e4-8775-770d6fd9718a">
+    <name>ЗаведЗаморозка12</name>
+    <synonym>
+      <key>ru</key>
+      <value>Завед заморозка12</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="c57f266e-3431-4ed1-9be1-0b1c7946999c">
+    <name>ЗаведЗаморозка12Оптики</name>
+    <synonym>
+      <key>ru</key>
+      <value>Завед заморозка12 оптики</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="1b0f3c0d-b924-4df5-9221-43686aa8be66">
+    <name>ЗаведВыполнениеПланаПоДТМ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Завед выполнение плана по ДТМ</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="fedc2593-7186-4a22-8fd6-90adb48b5efe">
+    <name>ЗаведВыполнениеПланаТоваровНаПродвижении</name>
+    <synonym>
+      <key>ru</key>
+      <value>Завед выполнение плана товаров на продвижении</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="8f9a6287-eb7f-4191-9fce-69304b61f3b9">
+    <name>ЗаведМД1</name>
+    <synonym>
+      <key>ru</key>
+      <value>Завед МД1</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="cc758b4e-51e9-437e-9dcb-ae7ebf78802e">
+    <name>ЗаведИтого</name>
+    <synonym>
+      <key>ru</key>
+      <value>Завед итого</value>
+    </synonym>
+  </enumValues>
+</mdclass:Enum>

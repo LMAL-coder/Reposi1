@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="b93d07bb-2458-42ea-8029-4333ccc755c9">
+  <producedTypes>
+    <objectType typeId="b8357b2c-f522-409d-afad-084d2c6b8b04" valueTypeId="0f94ffd5-201a-4365-8cc3-28d6e56f9ff2"/>
+    <refType typeId="61b04e6b-fde6-4d14-a935-72a84dd19fe7" valueTypeId="22bbce89-496f-4ebf-8fa8-4451d0a1b014"/>
+    <selectionType typeId="1b882873-2e21-429e-97bf-5067f46d1122" valueTypeId="81a6112c-a1e2-42c0-a2cf-5e4648d98033"/>
+    <listType typeId="8cbd809a-e44c-4017-ba06-5f624a6ef0a2" valueTypeId="f0f15ece-5f3d-4e64-aed3-8f540ea2a429"/>
+    <managerType typeId="8ad13cd8-9fe5-4709-834e-674fe2ca254b" valueTypeId="7aa80b85-a936-4d6b-a6de-893479e6f770"/>
+  </producedTypes>
+  <name>ТарифныеСтавки</name>
+  <synonym>
+    <key>ru</key>
+    <value>Тарифные ставки</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Catalog.ТарифныеСтавки.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.ТарифныеСтавки.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>9</codeLength>
+  <descriptionLength>25</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+  <attributes uuid="dc2610a4-a633-420e-bac4-565238088ed6">
+    <name>Должность</name>
+    <synonym>
+      <key>ru</key>
+      <value>Должность</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Должности</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="0723a916-ca76-44f4-a7d5-dba25812e595">
+    <name>ДиапазонС</name>
+    <synonym>
+      <key>ru</key>
+      <value>Диапазон С</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="90fe741d-18ad-4d14-9375-c295ede94be8">
+    <name>ДиапазонПо</name>
+    <synonym>
+      <key>ru</key>
+      <value>Диапазон по</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="d0daa190-e771-403a-9e0f-259bc5c41a75">
+    <name>Значение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Значение</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+</mdclass:Catalog>

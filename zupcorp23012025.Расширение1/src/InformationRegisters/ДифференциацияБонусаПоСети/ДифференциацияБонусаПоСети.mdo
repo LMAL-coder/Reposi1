@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="b6124ad0-b31a-43c2-9d64-07f87c295ced">
+  <producedTypes>
+    <selectionType typeId="9fd149e8-d5c3-4e91-a0b9-328a8578c89c" valueTypeId="d9148625-f078-4030-b557-3f59d1d5f2d1"/>
+    <listType typeId="456753f0-9e64-4703-b8de-a64834a86b87" valueTypeId="a99715b9-f6f1-4a74-ad95-b9cc09f032e2"/>
+    <managerType typeId="d3624880-30cd-485e-a390-69f8152c8ff9" valueTypeId="1031234b-ba1e-49be-be0e-6bfdd0535584"/>
+    <recordSetType typeId="71e94d0e-c601-41dd-b14d-042f3b89a850" valueTypeId="b2b82208-0260-42ee-89bb-2cab2b08f65c"/>
+    <recordKeyType typeId="dbba33ee-737f-4542-ba3e-3572b19cb7d4" valueTypeId="4ab57efb-d582-47b0-8eb5-789eb6b4d8b0"/>
+    <recordType typeId="fc203d43-3be8-420b-a8fd-2377898cb006" valueTypeId="8d0fe32c-2802-4473-9601-77c83d526145"/>
+    <recordManagerType typeId="dcf4fbcf-1bfb-4b88-b225-f680bb42b032" valueTypeId="2ac74ad9-208a-4278-9f42-e6935a043093"/>
+  </producedTypes>
+  <name>ДифференциацияБонусаПоСети</name>
+  <synonym>
+    <key>ru</key>
+    <value>Дифференциация бонуса по сети</value>
+  </synonym>
+  <dataHistory>Use</dataHistory>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <defaultListForm>InformationRegister.ДифференциацияБонусаПоСети.Form.ФормаСписка</defaultListForm>
+  <informationRegisterPeriodicity>Day</informationRegisterPeriodicity>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="22d0838b-e919-47a7-954c-fff7b32fc26f">
+    <name>Бонус1</name>
+    <synonym>
+      <key>ru</key>
+      <value>Бонус1</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="6dbb882d-3df2-4937-8aab-830293b26e29">
+    <name>Бонус2</name>
+    <synonym>
+      <key>ru</key>
+      <value>Бонус2</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="f2e011e9-f3d5-43bd-9b88-c452ea26ee66">
+    <name>Бонус1Оптика</name>
+    <synonym>
+      <key>ru</key>
+      <value>Бонус1 оптика</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="cab818e0-70c9-4c45-92ae-8d1f6f719d82">
+    <name>Бонус2Оптика</name>
+    <synonym>
+      <key>ru</key>
+      <value>Бонус2 оптика</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="20227023-9105-4e9f-88c9-bf90163633e0">
+    <name>ПроцентУслугиВрача</name>
+    <synonym>
+      <key>ru</key>
+      <value>Процент услуги врача</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="756829cd-11ca-475e-bc82-970b34f7e363">
+    <name>ПроцентОчковыеЛинзы</name>
+    <synonym>
+      <key>ru</key>
+      <value>Процент очковые линзы</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="a0a875bb-5897-4382-b9fb-533a56621bc1">
+    <name>НормаЧасовЗаМесяц</name>
+    <synonym>
+      <key>ru</key>
+      <value>Норма часов за месяц</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="daf0c104-6dc7-4ef6-abbb-4e5e92624879">
+    <name>НормаНочныхЧасов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Норма ночных часов</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="8aaf1ed5-1458-499a-b272-19a3e22d42ab">
+    <name>НормаЧасов28Дней</name>
+    <synonym>
+      <key>ru</key>
+      <value>Норма часов 28 дней</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="b343352a-421c-48d6-9842-0db9057cf421">
+    <name>НормаЧасов29Дней</name>
+    <synonym>
+      <key>ru</key>
+      <value>Норма часов29 дней</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="ea4017c1-46cc-4557-a185-0d0a12575a81">
+    <name>НормаЧасов30Дней</name>
+    <synonym>
+      <key>ru</key>
+      <value>Норма часов30 дней</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="2069cfcd-26f8-4232-8816-20d8893c7347">
+    <name>НормаЧасов31День</name>
+    <synonym>
+      <key>ru</key>
+      <value>Норма часов31 день</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="66d55dd8-1408-4338-b8dc-566946471f45">
+    <name>НормаНочь28Дней</name>
+    <synonym>
+      <key>ru</key>
+      <value>Норма ночь 28 дней</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="fb2c26c4-984d-4eff-b1c7-c8e8a7241d33">
+    <name>НормаНочь29Дней</name>
+    <synonym>
+      <key>ru</key>
+      <value>Норма ночь 29 дней</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="d96d79b0-db0d-4458-87d2-213fdbc0b15f">
+    <name>НормаНочь30Дней</name>
+    <synonym>
+      <key>ru</key>
+      <value>Норма ночь 30 дней</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="4b4fdaeb-e849-4e43-adb9-3f351e48efea">
+    <name>НормаНочь31Дней</name>
+    <synonym>
+      <key>ru</key>
+      <value>Норма ночь 31 дней</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="6aa3590c-42e9-41ed-84b9-f3433913589d">
+    <name>ПланПоВыручкеЧас</name>
+    <synonym>
+      <key>ru</key>
+      <value>План по выручке час</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="01a68f7a-9d4d-40d9-969b-e1f3f047a23c">
+    <name>СтоимостьКомандировки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Стоимость командировки</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="00454817-74d2-42d8-8576-436499e39cc3">
+    <name>СтоимостьКомандировкиОптика</name>
+    <synonym>
+      <key>ru</key>
+      <value>Стоимость командировки оптика</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="1423f4ce-3e96-450c-9a76-01080c4f4680">
+    <name>НадбавкаККомандировке</name>
+    <synonym>
+      <key>ru</key>
+      <value>Надбавка к командировке</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="cc9acb3e-3dbc-4694-8159-b7ead5dd7d4d">
+    <name>Подразделение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подразделение</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ПодразделенияОрганизаций</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="89a31e8e-8d1a-4aac-a82c-256ae8c04600">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

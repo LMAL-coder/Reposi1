@@ -1,0 +1,1647 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ФизическоеЛицо</dataPath>
+			<field>ФизическоеЛицо</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Сумма</dataPath>
+			<field>Сумма</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма руб.</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Показатель</dataPath>
+			<field>Показатель</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показатель</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Вид</dataPath>
+			<field>Вид</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Должность</dataPath>
+			<field>Должность</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Тариф</dataPath>
+			<field>Тариф</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тариф</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КатегорияАптеки</dataPath>
+			<field>КатегорияАптеки</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КатегорияСотрудник</dataPath>
+			<field>КатегорияСотрудник</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РазрядКатегория</dataPath>
+			<field>РазрядКатегория</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Подразделение</dataPath>
+			<field>Подразделение</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИНН</dataPath>
+			<field>ИНН</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Коэффициент</dataPath>
+			<field>Коэффициент</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>МаксимумПоФакту</dataPath>
+			<field>МаксимумПоФакту</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>МинимумПоФакту</dataPath>
+			<field>МинимумПоФакту</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	ДанныеПоАптекам.ФизическоеЛицо КАК ФизическоеЛицо,
+	ДанныеПоАптекам.Подразделение КАК Подразделение,
+	ДанныеПоАптекам.Должность КАК Должность,
+	ДанныеПоАптекам.РазрядКатегория КАК РазрядКатегория,
+	ДанныеПоАптекам.ВремяДень - ДанныеПоАптекам.ПраздникиВремяДень КАК ВремяДень,
+	ПоказателиПоДолжностямСрезПоследних.СтоимостьДиапазонаЧасов1 КАК СтоимостьДень,
+	ОКР((ДанныеПоАптекам.ВремяДень - ДанныеПоАптекам.ПраздникиВремяДень) * ПоказателиПоДолжностямСрезПоследних.СтоимостьДиапазонаЧасов1 * ПоказателиПоДолжностямСрезПоследних.Коэффициент, 2) КАК СуммаДень,
+	ДанныеПоАптекам.ВремяНочь - ДанныеПоАптекам.ПраздникиВремяНочь КАК ВремяНочь,
+	ПоказателиПоДолжностямСрезПоследних.СтоимостьНочногоЧаса КАК СтоимостьНочногоЧаса,
+	ОКР((ДанныеПоАптекам.ВремяНочь - ДанныеПоАптекам.ПраздникиВремяНочь) * ПоказателиПоДолжностямСрезПоследних.СтоимостьНочногоЧаса * ПоказателиПоДолжностямСрезПоследних.Коэффициент, 2) КАК СуммаНочь,
+	ДанныеПоАптекам.ПраздникиВремяДень КАК ПраздникиВремяДень,
+	ПоказателиПоДолжностямСрезПоследних.СтоимостьПраздники КАК СтоимостьПраздники,
+	ОКР(ДанныеПоАптекам.ПраздникиВремяДень * ПоказателиПоДолжностямСрезПоследних.СтоимостьПраздники * ПоказателиПоДолжностямСрезПоследних.Коэффициент, 2) КАК СуммаПраздникиДень,
+	ДанныеПоАптекам.ПраздникиВремяНочь КАК ПраздникиВремяНочь,
+	ОКР(ДанныеПоАптекам.ПраздникиВремяНочь * ПоказателиПоДолжностямСрезПоследних.СтоимостьПраздники * ПоказателиПоДолжностямСрезПоследних.Коэффициент, 2) КАК СуммаПраздникиНочь,
+	ДанныеПоАптекам.ЛичнаяВыручкаНеДТМ КАК ЛичнаяВыручкаНеДТМ,
+	ВЫБОР
+		КОГДА ДанныеПоАптекам.ЛичнаяВыручкаНеДТМ &lt;&gt; 0
+			ТОГДА ОКР(ДанныеПоАптекам.БонусЗаЛичнуюВыручку / ДанныеПоАптекам.ЛичнаяВыручкаНеДТМ * 100, 2)
+		ИНАЧЕ 0
+	КОНЕЦ КАК ПоказательНеДТМ1,
+	ДифференциацияБонусаПоСетиСрезПоследних.Бонус1 КАК ПоказательНеДТМ,
+	ОКР(ДанныеПоАптекам.БонусЗаЛичнуюВыручку * ПоказателиПоДолжностямСрезПоследних.Коэффициент, 2) КАК ПремияНеДТМ,
+	ДанныеПоАптекам.ЛичнаяВыручкаДТМ КАК ЛичнаяВыручкаДТМ,
+	ВЫБОР
+		КОГДА ДанныеПоАптекам.ЛичнаяВыручкаДТМ &lt;&gt; 0
+			ТОГДА ОКР(ДанныеПоАптекам.БонусПоДМ / ДанныеПоАптекам.ЛичнаяВыручкаДТМ * 100, 2)
+		ИНАЧЕ 0
+	КОНЕЦ КАК ПоказательДТМ1,
+	ДифференциацияБонусаПоСетиСрезПоследних.Бонус2 КАК ПоказательДТМ,
+	ОКР(ДанныеПоАптекам.БонусПоДМ * ПоказателиПоДолжностямСрезПоследних.Коэффициент, 2) КАК ПремияДТМ,
+	ДанныеПоАптекам.ЛичнаяВыручкаОптика КАК ЛичнаяВыручкаОптика,
+	ВЫБОР
+		КОГДА ДанныеПоАптекам.ЛичнаяВыручкаОптика &lt;&gt; 0
+			ТОГДА ОКР(ДанныеПоАптекам.БонусЗаОптику / ДанныеПоАптекам.ЛичнаяВыручкаОптика * 100, 2)
+		ИНАЧЕ 0
+	КОНЕЦ КАК ПоказательОптики1,
+	ДифференциацияБонусаПоСетиСрезПоследних.Бонус1Оптика КАК ПоказательОптики,
+	ОКР(ДанныеПоАптекам.БонусЗаОптику * ПоказателиПоДолжностямСрезПоследних.Коэффициент, 2) КАК ПремияОптики,
+	ДанныеПоАптекам.СуммаПродажТоваровНаПродвижении КАК СуммаПродажТоваровНаПродвижении,
+	ДанныеПоАптекам.СуммаПродажСрокиИЗМЗ КАК СуммаПродажСрокиИЗМЗ,
+	ОКР(ДанныеПоАптекам.БонусЗаСовмещение * ПоказателиПоДолжностямСрезПоследних.Коэффициент, 2) КАК ПремияЗаСовмещение,
+	ПоказателиПоДолжностямСрезПоследних.Коэффициент КАК Коэффициент,
+	ВЫБОР
+		КОГДА ПоказателиПоДолжностямСрезПоследних.НормаЧасов &lt;&gt; 0
+			ТОГДА ОКР(ПоказателиПоДолжностямСрезПоследних.Минимум * (ДанныеПоАптекам.ВремяДень + ДанныеПоАптекам.ВремяНочь) / ПоказателиПоДолжностямСрезПоследних.НормаЧасов, 0)
+		ИНАЧЕ 0
+	КОНЕЦ КАК min,
+	ВЫБОР
+		КОГДА ПоказателиПоДолжностямСрезПоследних.НормаЧасов &lt;&gt; 0
+			ТОГДА ОКР(ПоказателиПоДолжностямСрезПоследних.Максимум * (ДанныеПоАптекам.ВремяДень + ДанныеПоАптекам.ВремяНочь) / ПоказателиПоДолжностямСрезПоследних.НормаЧасов, 2)
+		ИНАЧЕ 0
+	КОНЕЦ КАК max
+ПОМЕСТИТЬ ВТ_ДанныеПоАптекам_ВыбраннаяАптека
+ИЗ
+	РегистрСведений.ПоказателиПоДолжностям.СрезПоследних(&amp;ДатаНачала, ) КАК ПоказателиПоДолжностямСрезПоследних
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.ДанныеПоАптекам КАК ДанныеПоАптекам
+			ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ДифференциацияБонусаПоСети.СрезПоследних(&amp;ДатаНачала, ) КАК ДифференциацияБонусаПоСетиСрезПоследних
+			ПО ДанныеПоАптекам.ПодразделениеРаботы = ДифференциацияБонусаПоСетиСрезПоследних.Подразделение
+		ПО ПоказателиПоДолжностямСрезПоследних.Должность = ДанныеПоАптекам.Должность
+			И ПоказателиПоДолжностямСрезПоследних.КатегорияСотрудник = ДанныеПоАптекам.РазрядКатегория
+			И ПоказателиПоДолжностямСрезПоследних.КатегорияАптеки = ДанныеПоАптекам.РазрядПодразделение
+ГДЕ
+	ДанныеПоАптекам.ДатаС МЕЖДУ &amp;ДатаНачала И &amp;ДатаОкончания
+	И ДанныеПоАптекам.ДатаПо МЕЖДУ &amp;ДатаНачала И &amp;ДатаОкончания
+	И ДанныеПоАптекам.ПодразделениеРаботы в (&amp;Подразделение)
+
+ИНДЕКСИРОВАТЬ ПО
+	ФизическоеЛицо
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ДанныеПоАптекам.ФизическоеЛицо КАК ФизическоеЛицо,
+	СУММА(ДанныеПоАптекам.ВремяДень) КАК ВремяДень,
+	СУММА(ДанныеПоАптекам.ВремяНочь) КАК ВремяНочь,
+	СУММА(ДанныеПоАптекам.ПраздникиВремяДень) КАК ПраздникиВремяДень,
+	СУММА(ДанныеПоАптекам.ПраздникиВремяНочь) КАК ПраздникиВремяНочь,
+	СУММА(ДанныеПоАптекам.ЛичнаяВыручкаНеДТМ) КАК ЛичнаяВыручкаНеДТМ,
+	СУММА(ДанныеПоАптекам.БонусЗаЛичнуюВыручку) КАК БонусЗаЛичнуюВыручку,
+	СУММА(ДанныеПоАптекам.ЛичнаяВыручкаДТМ) КАК ЛичнаяВыручкаДТМ,
+	СУММА(ДанныеПоАптекам.БонусПоДМ) КАК БонусПоДМ,
+	СУММА(ДанныеПоАптекам.ЛичнаяВыручкаОптика) КАК ЛичнаяВыручкаОптика,
+	СУММА(ДанныеПоАптекам.БонусЗаОптику) КАК БонусЗаОптику,
+	СУММА(ДанныеПоАптекам.СуммаПродажТоваровНаПродвижении) КАК СуммаПродажТоваровНаПродвижении,
+	СУММА(ДанныеПоАптекам.СуммаПродажСрокиИЗМЗ) КАК СуммаПродажСрокиИЗМЗ
+ПОМЕСТИТЬ ВТ_ДанныеПоАптекам_ОбщееПоВсемАптекам
+ИЗ
+	ВТ_ДанныеПоАптекам_ВыбраннаяАптека КАК ВТ_ДанныеПоАптекам_ВыбраннаяАптека
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.ДанныеПоАптекам КАК ДанныеПоАптекам
+		ПО ВТ_ДанныеПоАптекам_ВыбраннаяАптека.ФизическоеЛицо = ДанныеПоАптекам.ФизическоеЛицо
+ГДЕ
+	ДанныеПоАптекам.ДатаС МЕЖДУ &amp;ДатаНачала И &amp;ДатаОкончания
+	И ДанныеПоАптекам.ДатаПо МЕЖДУ &amp;ДатаНачала И &amp;ДатаОкончания
+
+СГРУППИРОВАТЬ ПО
+	ДанныеПоАптекам.ФизическоеЛицо
+
+ИНДЕКСИРОВАТЬ ПО
+	ФизическоеЛицо
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	НачисленияЗППоАптекам.Период КАК Период,
+	НачисленияЗППоАптекам.ФизическоеЛицо КАК ФизическоеЛицо,
+	НачисленияЗППоАптекам.ОсновнаяАптека КАК ОсновноеПодразделение,
+	НачисленияЗППоАптекам.Должность КАК Должность,
+	НачисленияЗППоАптекам.РазрядКатегория КАК РазрядКатегория,
+	НачисленияЗППоАптекам.ТН КАК ТН,
+	НачисленияЗППоАптекам.ИНН КАК ИНН,
+	НачисленияЗППоАптекам.ВсегоПоРасчету КАК ВсегоПоРасчету,
+	НачисленияЗППоАптекам.ИтогоДоГраниц КАК ИтогоДоГраниц,
+	НачисленияЗППоАптекам.МинимумПоФакту КАК МинимумПоФакту,
+	НачисленияЗППоАптекам.МаксимумПоФакту КАК МаксимумПоФакту,
+	НачисленияЗППоАптекам.ВсегоПоРасчету - НачисленияЗППоАптекам.ИтогоДоГраниц КАК КоррекцияПремии1,
+	НачисленияЗППоАптекам.Доплата2 КАК КоррекцияПремии2,
+	НачисленияЗППоАптекам.ОтработаноВсего КАК ОтработаноВсего,
+	НачисленияЗППоАптекам.ИтогоЗаОтработанноеВремя КАК ИтогоЗаОтработанноеВремя,
+	НачисленияЗППоАптекам.Оклад0_166_Часы КАК Оклад0_166_Часы,
+	НачисленияЗППоАптекам.Оклад0_166Сумма КАК Оклад0_166Сумма,
+	НачисленияЗППоАптекам.Ночь_Часы КАК Ночь_Часы,
+	НачисленияЗППоАптекам.Ночь_Сумма КАК Ночь_Сумма,
+	НачисленияЗППоАптекам.ПраздникиДеньЧасы КАК ПраздникиДеньЧасы,
+	НачисленияЗППоАптекам.ПраздникиДеньСумма КАК ПраздникиДеньСумма,
+	НачисленияЗППоАптекам.ПраздникиНочьЧасы КАК ПраздникиНочьЧасы,
+	НачисленияЗППоАптекам.ПраздникиНочьСумма КАК ПраздникиНочьСумма,
+	НачисленияЗППоАптекам.ИтогоБонусов КАК ИтогоБонусов,
+	ВТ_ДанныеПоАптекам.ЛичнаяВыручкаНеДТМ КАК ЛичнаяВыручкаНеДТМ,
+	НачисленияЗППоАптекам.БонусНеДТМ КАК БонусНеДТМ,
+	ВТ_ДанныеПоАптекам.ЛичнаяВыручкаДТМ КАК ЛичнаяВыручкаДТМ,
+	НачисленияЗППоАптекам.БонусДТМ КАК БонусДТМ,
+	ВТ_ДанныеПоАптекам.ЛичнаяВыручкаОптика КАК ЛичнаяВыручкаОптика,
+	НачисленияЗППоАптекам.БонусЗаОптику КАК БонусЗаОптику,
+	ВТ_ДанныеПоАптекам.СуммаПродажТоваровНаПродвижении КАК СуммаПродажТоваровНаПродвижении,
+	НачисленияЗППоАптекам.БонусАкции КАК БонусАкции,
+	ВТ_ДанныеПоАптекам.СуммаПродажСрокиИЗМЗ КАК СуммаПродажСрокиИЗМЗ,
+	НачисленияЗППоАптекам.БонусЗМЗ КАК БонусЗМЗ,
+	НачисленияЗППоАптекам.Доплата1 КАК Доплата1,
+	ВЫБОР
+		КОГДА ВТ_ДанныеПоАптекам.ЛичнаяВыручкаНеДТМ &lt;&gt; 0
+			ТОГДА ОКР(НачисленияЗППоАптекам.БонусНеДТМ / ВТ_ДанныеПоАптекам.ЛичнаяВыручкаНеДТМ * 100, 4)
+		ИНАЧЕ 0
+	КОНЕЦ КАК ПоказательНеДТМ,
+	ВЫБОР
+		КОГДА ВТ_ДанныеПоАптекам.ЛичнаяВыручкаДТМ &lt;&gt; 0
+			ТОГДА ОКР(НачисленияЗППоАптекам.БонусДТМ / ВТ_ДанныеПоАптекам.ЛичнаяВыручкаДТМ * 100, 4)
+		ИНАЧЕ 0
+	КОНЕЦ КАК ПоказательДТМ,
+	ВЫБОР
+		КОГДА ВТ_ДанныеПоАптекам.ЛичнаяВыручкаОптика &lt;&gt; 0
+			ТОГДА ОКР(НачисленияЗППоАптекам.БонусЗаОптику / ВТ_ДанныеПоАптекам.ЛичнаяВыручкаОптика * 100, 4)
+		ИНАЧЕ 0
+	КОНЕЦ КАК ПоказательОптика,
+	ВЫБОР
+		КОГДА НачисленияЗППоАптекам.Оклад0_166_Часы &lt;&gt; 0
+			ТОГДА ОКР(НачисленияЗППоАптекам.Оклад0_166Сумма / НачисленияЗППоАптекам.Оклад0_166_Часы, 4)
+		ИНАЧЕ 0
+	КОНЕЦ КАК День1,
+	ВЫБОР
+		КОГДА НачисленияЗППоАптекам.Ночь_Часы &lt;&gt; 0
+			ТОГДА ОКР(НачисленияЗППоАптекам.Ночь_Сумма / НачисленияЗППоАптекам.Ночь_Часы, 4)
+		ИНАЧЕ 0
+	КОНЕЦ КАК Ночь1,
+	ВЫБОР
+		КОГДА НачисленияЗППоАптекам.ПраздникиДеньЧасы &lt;&gt; 0
+			ТОГДА ОКР(НачисленияЗППоАптекам.ПраздникиДеньСумма / НачисленияЗППоАптекам.ПраздникиДеньЧасы, 4)
+		ИНАЧЕ 0
+	КОНЕЦ КАК День2,
+	ВЫБОР
+		КОГДА НачисленияЗППоАптекам.ПраздникиНочьЧасы &lt;&gt; 0
+			ТОГДА ОКР(НачисленияЗППоАптекам.ПраздникиНочьСумма / НачисленияЗППоАптекам.ПраздникиНочьЧасы, 4)
+		ИНАЧЕ 0
+	КОНЕЦ КАК Ночь2
+ПОМЕСТИТЬ ВТ_ЗПОбщая
+ИЗ
+	РегистрСведений.НачисленияЗППоАптекам КАК НачисленияЗППоАптекам
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ВТ_ДанныеПоАптекам_ОбщееПоВсемАптекам КАК ВТ_ДанныеПоАптекам
+		ПО НачисленияЗППоАптекам.ФизическоеЛицо = ВТ_ДанныеПоАптекам.ФизическоеЛицо
+ГДЕ
+	НачисленияЗППоАптекам.Период МЕЖДУ &amp;ДатаНачала И &amp;ДатаОкончания
+
+ИНДЕКСИРОВАТЬ ПО
+	ФизическоеЛицо
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_ДанныеПоАптекам.ФизическоеЛицо КАК ФизическоеЛицо,
+	ВТ_ЗПОбщая.ИНН КАК ИНН,
+	ВТ_ДанныеПоАптекам.ВремяДень КАК ВремяДень,
+	ВТ_ДанныеПоАптекам.СтоимостьДень КАК СтоимостьДень,
+	ВТ_ДанныеПоАптекам.СуммаДень КАК СуммаДень,
+	ВТ_ДанныеПоАптекам.ВремяНочь КАК ВремяНочь,
+	ВТ_ДанныеПоАптекам.СтоимостьНочногоЧаса КАК СтоимостьНочногоЧаса,
+	ВТ_ДанныеПоАптекам.СуммаНочь КАК СуммаНочь,
+	ВТ_ДанныеПоАптекам.ПраздникиВремяДень КАК ПраздникиВремяДень,
+	ВТ_ДанныеПоАптекам.СтоимостьПраздники КАК СтоимостьПраздники,
+	ВТ_ДанныеПоАптекам.СуммаПраздникиДень КАК СуммаПраздникиДень,
+	ВТ_ДанныеПоАптекам.ПраздникиВремяНочь КАК ПраздникиВремяНочь,
+	ВТ_ДанныеПоАптекам.СуммаПраздникиНочь КАК СуммаПраздникиНочь,
+	ВТ_ДанныеПоАптекам.ЛичнаяВыручкаНеДТМ КАК ЛичнаяВыручкаНеДТМ,
+	ВТ_ДанныеПоАптекам.ПоказательНеДТМ КАК ПоказательНеДТМ,
+	ВТ_ДанныеПоАптекам.ПремияНеДТМ КАК ПремияНеДТМ,
+	ВТ_ДанныеПоАптекам.ЛичнаяВыручкаДТМ КАК ЛичнаяВыручкаДТМ,
+	ВТ_ДанныеПоАптекам.ПоказательДТМ КАК ПоказательДТМ,
+	ВТ_ДанныеПоАптекам.ПремияДТМ КАК ПремияДТМ,
+	ВТ_ДанныеПоАптекам.ЛичнаяВыручкаОптика КАК ЛичнаяВыручкаОптика,
+	ВТ_ДанныеПоАптекам.ПоказательОптики КАК ПоказательОптики,
+	ВТ_ДанныеПоАптекам.ПремияОптики КАК ПремияОптики,
+	ВТ_ДанныеПоАптекам.СуммаПродажСрокиИЗМЗ КАК СуммаПродажСрокиИЗМЗ,
+	ВЫБОР
+		КОГДА ВТ_ЗПОбщая.СуммаПродажСрокиИЗМЗ &lt;&gt; 0
+			ТОГДА ОКР(ВТ_ДанныеПоАптекам.СуммаПродажСрокиИЗМЗ / ВТ_ЗПОбщая.СуммаПродажСрокиИЗМЗ * ВТ_ЗПОбщая.БонусЗМЗ, 2)
+		ИНАЧЕ 0
+	КОНЕЦ КАК ПремияЗМЗ,
+	ВТ_ДанныеПоАптекам.СуммаПродажТоваровНаПродвижении КАК СуммаПродажТоваровНаПродвижении,
+	ВЫБОР
+		КОГДА ВТ_ЗПОбщая.СуммаПродажТоваровНаПродвижении &lt;&gt; 0
+			ТОГДА ОКР(ВТ_ДанныеПоАптекам.СуммаПродажТоваровНаПродвижении / ВТ_ЗПОбщая.СуммаПродажТоваровНаПродвижении * ВТ_ЗПОбщая.БонусАкции, 2)
+		ИНАЧЕ 0
+	КОНЕЦ КАК ПремияТоваровНаПродвижении,
+	ВТ_ДанныеПоАптекам.ПремияЗаСовмещение КАК ПремияЗаСовмещение,
+	ОКР((ВТ_ЗПОбщая.ВсегоПоРасчету - ВТ_ЗПОбщая.ИтогоДоГраниц - ВТ_ЗПОбщая.Доплата1) * (ВТ_ДанныеПоАптекам.СуммаДень + ВТ_ДанныеПоАптекам.СуммаНочь + ВТ_ДанныеПоАптекам.СуммаПраздникиДень + ВТ_ДанныеПоАптекам.СуммаПраздникиНочь + ВТ_ДанныеПоАптекам.ПремияНеДТМ + ВТ_ДанныеПоАптекам.ПремияДТМ + ВТ_ДанныеПоАптекам.ПремияОптики + ВЫБОР
+			КОГДА ВТ_ЗПОбщая.СуммаПродажТоваровНаПродвижении &lt;&gt; 0
+				ТОГДА ОКР(ВТ_ДанныеПоАптекам.СуммаПродажТоваровНаПродвижении / ВТ_ЗПОбщая.СуммаПродажТоваровНаПродвижении * ВТ_ЗПОбщая.БонусАкции, 2)
+			ИНАЧЕ 0
+		КОНЕЦ + ВЫБОР
+			КОГДА ВТ_ЗПОбщая.СуммаПродажСрокиИЗМЗ &lt;&gt; 0
+				ТОГДА ОКР(ВТ_ДанныеПоАптекам.СуммаПродажСрокиИЗМЗ / ВТ_ЗПОбщая.СуммаПродажСрокиИЗМЗ * ВТ_ЗПОбщая.БонусЗМЗ, 2)
+			ИНАЧЕ 0
+		КОНЕЦ) / ВТ_ЗПОбщая.ИтогоДоГраниц, 2) КАК КоррекцияПремии1,
+	ОКР(ВТ_ЗПОбщая.КоррекцияПремии2 * (ВТ_ДанныеПоАптекам.СуммаДень + ВТ_ДанныеПоАптекам.СуммаНочь + ВТ_ДанныеПоАптекам.СуммаПраздникиДень + ВТ_ДанныеПоАптекам.СуммаПраздникиНочь + ВТ_ДанныеПоАптекам.ПремияНеДТМ + ВТ_ДанныеПоАптекам.ПремияДТМ + ВТ_ДанныеПоАптекам.ПремияОптики + ВЫБОР
+			КОГДА ВТ_ЗПОбщая.СуммаПродажТоваровНаПродвижении &lt;&gt; 0
+				ТОГДА ОКР(ВТ_ДанныеПоАптекам.СуммаПродажТоваровНаПродвижении / ВТ_ЗПОбщая.СуммаПродажТоваровНаПродвижении * ВТ_ЗПОбщая.БонусАкции, 2)
+			ИНАЧЕ 0
+		КОНЕЦ + ВЫБОР
+			КОГДА ВТ_ЗПОбщая.СуммаПродажСрокиИЗМЗ &lt;&gt; 0
+				ТОГДА ОКР(ВТ_ДанныеПоАптекам.СуммаПродажСрокиИЗМЗ / ВТ_ЗПОбщая.СуммаПродажСрокиИЗМЗ * ВТ_ЗПОбщая.БонусЗМЗ, 2)
+			ИНАЧЕ 0
+		КОНЕЦ + ВТ_ДанныеПоАптекам.ПремияЗаСовмещение) / (ВТ_ЗПОбщая.ИтогоДоГраниц + ВТ_ЗПОбщая.Доплата1), 2) КАК КоррекцияПремии2,
+	ВТ_ДанныеПоАптекам.СуммаДень + ВТ_ДанныеПоАптекам.СуммаНочь + ВТ_ДанныеПоАптекам.СуммаПраздникиДень + ВТ_ДанныеПоАптекам.СуммаПраздникиНочь + ВТ_ДанныеПоАптекам.ПремияНеДТМ + ВТ_ДанныеПоАптекам.ПремияДТМ + ВТ_ДанныеПоАптекам.ПремияОптики + ВЫБОР
+		КОГДА ВТ_ЗПОбщая.СуммаПродажТоваровНаПродвижении &lt;&gt; 0
+			ТОГДА ОКР(ВТ_ДанныеПоАптекам.СуммаПродажТоваровНаПродвижении / ВТ_ЗПОбщая.СуммаПродажТоваровНаПродвижении * ВТ_ЗПОбщая.БонусАкции, 2)
+		ИНАЧЕ 0
+	КОНЕЦ + ВЫБОР
+		КОГДА ВТ_ЗПОбщая.СуммаПродажСрокиИЗМЗ &lt;&gt; 0
+			ТОГДА ОКР(ВТ_ДанныеПоАптекам.СуммаПродажСрокиИЗМЗ / ВТ_ЗПОбщая.СуммаПродажСрокиИЗМЗ * ВТ_ЗПОбщая.БонусЗМЗ, 2)
+		ИНАЧЕ 0
+	КОНЕЦ КАК Всего,
+	ВТ_ДанныеПоАптекам.Подразделение КАК Подразделение,
+	ВТ_ДанныеПоАптекам.Должность КАК Должность,
+	ВТ_ДанныеПоАптекам.РазрядКатегория КАК РазрядКатегория,
+	ВТ_ДанныеПоАптекам.min КАК min,
+	ВТ_ДанныеПоАптекам.max КАК max,
+	ВТ_ДанныеПоАптекам.Коэффициент КАК Коэффициент,
+	ВТ_ЗПОбщая.МинимумПоФакту КАК МинимумПоФакту,
+	ВТ_ЗПОбщая.МаксимумПоФакту КАК МаксимумПоФакту
+ПОМЕСТИТЬ ВТ_ЗП1
+ИЗ
+	ВТ_ДанныеПоАптекам_ВыбраннаяАптека КАК ВТ_ДанныеПоАптекам
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТ_ЗПОбщая КАК ВТ_ЗПОбщая
+		ПО ВТ_ДанныеПоАптекам.ФизическоеЛицо = ВТ_ЗПОбщая.ФизическоеЛицо
+
+ИНДЕКСИРОВАТЬ ПО
+	ФизическоеЛицо
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_ЗП1.ФизическоеЛицо КАК ФизическоеЛицо,
+	"01 Отработано день, часы" КАК Вид,
+	ВТ_ЗП1.ВремяДень КАК Показатель,
+	ВТ_ЗП1.СтоимостьДень КАК Тариф,
+	ВТ_ЗП1.СуммаДень КАК Сумма
+ПОМЕСТИТЬ ВТ_Объединение
+ИЗ
+	ВТ_ЗП1 КАК ВТ_ЗП1
+
+ОБЪЕДИНИТЬ
+
+ВЫБРАТЬ
+	ВТ_ЗП1.ФизическоеЛицо,
+	"02 Отработано ночь, часы",
+	ВТ_ЗП1.ВремяНочь,
+	ВТ_ЗП1.СтоимостьНочногоЧаса,
+	ВТ_ЗП1.СуммаНочь
+ИЗ
+	ВТ_ЗП1 КАК ВТ_ЗП1
+
+ОБЪЕДИНИТЬ
+
+ВЫБРАТЬ
+	ВТ_ЗП1.ФизическоеЛицо,
+	"03 Праздники день, часы",
+	ВТ_ЗП1.ПраздникиВремяДень,
+	ВТ_ЗП1.СтоимостьПраздники,
+	ВТ_ЗП1.СуммаПраздникиДень
+ИЗ
+	ВТ_ЗП1 КАК ВТ_ЗП1
+
+ОБЪЕДИНИТЬ
+
+ВЫБРАТЬ
+	ВТ_ЗП1.ФизическоеЛицо,
+	"04 Праздники ночь, часы",
+	ВТ_ЗП1.ПраздникиВремяНочь,
+	ВТ_ЗП1.СтоимостьПраздники,
+	ВТ_ЗП1.СуммаПраздникиНочь
+ИЗ
+	ВТ_ЗП1 КАК ВТ_ЗП1
+
+ОБЪЕДИНИТЬ
+
+ВЫБРАТЬ
+	ВТ_ЗП1.ФизическоеЛицо,
+	"05 Премия не ДТМ и не оптики",
+	ВТ_ЗП1.ЛичнаяВыручкаНеДТМ,
+	ВТ_ЗП1.ПоказательНеДТМ,
+	ВТ_ЗП1.ПремияНеДТМ
+ИЗ
+	ВТ_ЗП1 КАК ВТ_ЗП1
+
+ОБЪЕДИНИТЬ
+
+ВЫБРАТЬ
+	ВТ_ЗП1.ФизическоеЛицо,
+	"06 Премия ДТМ",
+	ВТ_ЗП1.ЛичнаяВыручкаДТМ,
+	ВТ_ЗП1.ПоказательДТМ,
+	ВТ_ЗП1.ПремияДТМ
+ИЗ
+	ВТ_ЗП1 КАК ВТ_ЗП1
+
+ОБЪЕДИНИТЬ
+
+ВЫБРАТЬ
+	ВТ_ЗП1.ФизическоеЛицо,
+	"07 Премия оптики",
+	ВТ_ЗП1.ЛичнаяВыручкаОптика,
+	ВТ_ЗП1.ПоказательОптики,
+	ВТ_ЗП1.ПремияОптики
+ИЗ
+	ВТ_ЗП1 КАК ВТ_ЗП1
+
+ОБЪЕДИНИТЬ
+
+ВЫБРАТЬ
+	ВТ_ЗП1.ФизическоеЛицо,
+	"08 Премия за маркетинг",
+	ВТ_ЗП1.СуммаПродажТоваровНаПродвижении,
+	0,
+	ВТ_ЗП1.ПремияТоваровНаПродвижении
+ИЗ
+	ВТ_ЗП1 КАК ВТ_ЗП1
+
+ОБЪЕДИНИТЬ
+
+ВЫБРАТЬ
+	ВТ_ЗП1.ФизическоеЛицо,
+	"09 Премия сроки и ЗМЗ",
+	ВТ_ЗП1.СуммаПродажСрокиИЗМЗ,
+	0,
+	ВТ_ЗП1.ПремияЗМЗ
+ИЗ
+	ВТ_ЗП1 КАК ВТ_ЗП1
+
+ОБЪЕДИНИТЬ
+
+ВЫБРАТЬ
+	ВТ_ЗП1.ФизическоеЛицо,
+	"10 Корректировка премии1 (min/max)",
+	0,
+	0,
+	ВТ_ЗП1.КоррекцияПремии1
+ИЗ
+	ВТ_ЗП1 КАК ВТ_ЗП1
+
+ОБЪЕДИНИТЬ
+
+ВЫБРАТЬ
+	ВТ_ЗП1.ФизическоеЛицо,
+	"11 Корректировка премии2",
+	0,
+	0,
+	ВТ_ЗП1.КоррекцияПремии2
+ИЗ
+	ВТ_ЗП1 КАК ВТ_ЗП1
+
+ОБЪЕДИНИТЬ
+
+ВЫБРАТЬ
+	ВТ_ЗП1.ФизическоеЛицо,
+	"12 Доплата за командировки",
+	0,
+	0,
+	ВТ_ЗП1.ПремияЗаСовмещение
+ИЗ
+	ВТ_ЗП1 КАК ВТ_ЗП1
+
+ИНДЕКСИРОВАТЬ ПО
+	ФизическоеЛицо
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_Объединение.ФизическоеЛицо КАК ФизическоеЛицо,
+	ВТ_Объединение.Вид КАК Вид,
+	СУММА(ВТ_Объединение.Показатель) КАК Показатель,
+	ВТ_Объединение.Тариф КАК Тариф,
+	СУММА(ВТ_Объединение.Сумма) КАК Сумма
+ПОМЕСТИТЬ ВТ_Итог
+ИЗ
+	ВТ_Объединение КАК ВТ_Объединение
+
+СГРУППИРОВАТЬ ПО
+	ВТ_Объединение.ФизическоеЛицо,
+	ВТ_Объединение.Вид,
+	ВТ_Объединение.Тариф
+
+ИНДЕКСИРОВАТЬ ПО
+	ФизическоеЛицо
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_Итог.ФизическоеЛицо КАК ФизическоеЛицо,
+	ВТ_ЗП1.ИНН КАК ИНН,
+	ВТ_ЗП1.Подразделение КАК Подразделение,
+	ВТ_ЗП1.Должность КАК Должность,
+	ВТ_ЗП1.РазрядКатегория КАК РазрядКатегория,
+	ВТ_Итог.Вид КАК Вид,
+	ВТ_Итог.Показатель КАК Показатель,
+	ВТ_Итог.Тариф КАК Тариф,
+	ВТ_Итог.Сумма КАК Сумма,
+	ВТ_ЗП1.Коэффициент КАК Коэффициент,
+	ВТ_ЗП1.МинимумПоФакту КАК МинимумПоФакту,
+	ВТ_ЗП1.МаксимумПоФакту КАК МаксимумПоФакту
+ИЗ
+	ВТ_Итог КАК ВТ_Итог
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТ_ЗП1 КАК ВТ_ЗП1
+		ПО ВТ_Итог.ФизическоеЛицо = ВТ_ЗП1.ФизическоеЛицо
+
+УПОРЯДОЧИТЬ ПО
+	ВТ_Итог.ФизическоеЛицо.Наименование,
+	Вид</query>
+	</dataSet>
+	<totalField>
+		<dataPath>Сумма</dataPath>
+		<expression>Сумма(Сумма)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Коэффициент</dataPath>
+		<expression>Максимум(Коэффициент)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>МаксимумПоФакту</dataPath>
+		<expression>Максимум(МаксимумПоФакту)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>МинимумПоФакту</dataPath>
+		<expression>Минимум(МинимумПоФакту)</expression>
+	</totalField>
+	<parameter>
+		<name>ДатаНачала</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата начала</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>Date</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;Период1.ДатаНачала</expression>
+	</parameter>
+	<parameter>
+		<name>ДатаОкончания</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата окончания</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>Date</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;Период1.ДатаОкончания</expression>
+	</parameter>
+	<parameter>
+		<name>Период1</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>v8:StandardPeriod</v8:Type>
+		</valueType>
+		<value xsi:type="v8:StandardPeriod">
+			<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+			<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+			<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+		</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Подразделение</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Подразделение</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ПодразделенияОрганизаций</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<template>
+		<name>Макет2</name>
+		<template xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:AreaTemplate">
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Данные по заплате сотрудника: </v8:content>
+							</v8:item>
+						</dcsat:value>
+					</dcsat:item>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="dcscor:Parameter">Сотрудник</dcsat:value>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Font" faceName="Arial" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">53</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">53</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+			</dcsat:item>
+		</template>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>Сотрудник</dcsat:name>
+			<dcsat:expression>Представление(ФизическоеЛицо)</dcsat:expression>
+		</parameter>
+	</template>
+	<template>
+		<name>Макет3</name>
+		<template xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:AreaTemplate">
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="dcscor:Parameter">Должность</dcsat:value>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Font" faceName="Arial" height="10" bold="false" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">53</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">53</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+			</dcsat:item>
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="dcscor:Parameter">Подразделение</dcsat:value>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Font" faceName="Arial" height="10" bold="false" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">53</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">53</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+			</dcsat:item>
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Коэффициент </v8:content>
+							</v8:item>
+						</dcsat:value>
+					</dcsat:item>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="dcscor:Parameter">коэффициент</dcsat:value>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Font" faceName="Arial" height="10" bold="false" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">53</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">53</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+			</dcsat:item>
+		</template>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>Подразделение</dcsat:name>
+			<dcsat:expression>Представление(Подразделение)</dcsat:expression>
+		</parameter>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>Должность</dcsat:name>
+			<dcsat:expression>Представление(Должность)</dcsat:expression>
+		</parameter>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>коэффициент</dcsat:name>
+			<dcsat:expression>Коэффициент</dcsat:expression>
+		</parameter>
+	</template>
+	<template>
+		<name>Макет4</name>
+		<template xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:AreaTemplate">
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Вид начисления</v8:content>
+							</v8:item>
+						</dcsat:value>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>СтильГраницы</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Line" width="0" gap="false">
+								<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">None</v8ui:style>
+							</dcscor:value>
+							<dcscor:item>
+								<dcscor:parameter>СтильГраницы.Слева</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+							<dcscor:item>
+								<dcscor:parameter>СтильГраницы.Сверху</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+							<dcscor:item>
+								<dcscor:parameter>СтильГраницы.Справа</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+							<dcscor:item>
+								<dcscor:parameter>СтильГраницы.Снизу</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Font" faceName="Arial" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">27.25</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">27.25</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Показатель</v8:content>
+							</v8:item>
+						</dcsat:value>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>СтильГраницы</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Line" width="0" gap="false">
+								<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">None</v8ui:style>
+							</dcscor:value>
+							<dcscor:item>
+								<dcscor:parameter>СтильГраницы.Слева</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+							<dcscor:item>
+								<dcscor:parameter>СтильГраницы.Сверху</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+							<dcscor:item>
+								<dcscor:parameter>СтильГраницы.Справа</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+							<dcscor:item>
+								<dcscor:parameter>СтильГраницы.Снизу</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Font" faceName="Arial" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">13</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">13</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Тариф</v8:content>
+							</v8:item>
+						</dcsat:value>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>СтильГраницы</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Line" width="0" gap="false">
+								<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">None</v8ui:style>
+							</dcscor:value>
+							<dcscor:item>
+								<dcscor:parameter>СтильГраницы.Слева</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+							<dcscor:item>
+								<dcscor:parameter>СтильГраницы.Сверху</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+							<dcscor:item>
+								<dcscor:parameter>СтильГраницы.Справа</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+							<dcscor:item>
+								<dcscor:parameter>СтильГраницы.Снизу</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Font" faceName="Arial" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">7</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">7</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Сумма руб.</v8:content>
+							</v8:item>
+						</dcsat:value>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>СтильГраницы</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Line" width="0" gap="false">
+								<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">None</v8ui:style>
+							</dcscor:value>
+							<dcscor:item>
+								<dcscor:parameter>СтильГраницы.Слева</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+							<dcscor:item>
+								<dcscor:parameter>СтильГраницы.Сверху</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+							<dcscor:item>
+								<dcscor:parameter>СтильГраницы.Справа</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+							<dcscor:item>
+								<dcscor:parameter>СтильГраницы.Снизу</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Font" faceName="Arial" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">13.75</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">13.75</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+			</dcsat:item>
+		</template>
+	</template>
+	<template>
+		<name>Макет5</name>
+		<template xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:AreaTemplate">
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="dcscor:Parameter">Вид</dcsat:value>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>СтильГраницы</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Line" width="0" gap="false">
+								<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">None</v8ui:style>
+							</dcscor:value>
+							<dcscor:item>
+								<dcscor:parameter>СтильГраницы.Слева</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+							<dcscor:item>
+								<dcscor:parameter>СтильГраницы.Сверху</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+							<dcscor:item>
+								<dcscor:parameter>СтильГраницы.Справа</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+							<dcscor:item>
+								<dcscor:parameter>СтильГраницы.Снизу</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Font" faceName="Arial" height="10" bold="false" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">27.25</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">27.25</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="dcscor:Parameter">Показатель</dcsat:value>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>СтильГраницы</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Line" width="0" gap="false">
+								<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">None</v8ui:style>
+							</dcscor:value>
+							<dcscor:item>
+								<dcscor:parameter>СтильГраницы.Слева</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+							<dcscor:item>
+								<dcscor:parameter>СтильГраницы.Сверху</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+							<dcscor:item>
+								<dcscor:parameter>СтильГраницы.Справа</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+							<dcscor:item>
+								<dcscor:parameter>СтильГраницы.Снизу</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Font" faceName="Arial" height="10" bold="false" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:HorizontalAlign">Left</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">13</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">13</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="dcscor:Parameter">Тариф</dcsat:value>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>СтильГраницы</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Line" width="0" gap="false">
+								<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">None</v8ui:style>
+							</dcscor:value>
+							<dcscor:item>
+								<dcscor:parameter>СтильГраницы.Слева</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+							<dcscor:item>
+								<dcscor:parameter>СтильГраницы.Сверху</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+							<dcscor:item>
+								<dcscor:parameter>СтильГраницы.Справа</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+							<dcscor:item>
+								<dcscor:parameter>СтильГраницы.Снизу</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Font" faceName="Arial" height="10" bold="false" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:HorizontalAlign">Left</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">7</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">7</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="dcscor:Parameter">Сумма</dcsat:value>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>СтильГраницы</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Line" width="0" gap="false">
+								<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">None</v8ui:style>
+							</dcscor:value>
+							<dcscor:item>
+								<dcscor:parameter>СтильГраницы.Слева</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+							<dcscor:item>
+								<dcscor:parameter>СтильГраницы.Сверху</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+							<dcscor:item>
+								<dcscor:parameter>СтильГраницы.Справа</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+							<dcscor:item>
+								<dcscor:parameter>СтильГраницы.Снизу</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Font" faceName="Arial" height="10" bold="false" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:HorizontalAlign">Left</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">13.75</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">13.75</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+			</dcsat:item>
+		</template>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>Вид</dcsat:name>
+			<dcsat:expression>Вид</dcsat:expression>
+		</parameter>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>Показатель</dcsat:name>
+			<dcsat:expression>Показатель</dcsat:expression>
+		</parameter>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>Тариф</dcsat:name>
+			<dcsat:expression>Тариф</dcsat:expression>
+		</parameter>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>Сумма</dcsat:name>
+			<dcsat:expression>Сумма</dcsat:expression>
+		</parameter>
+	</template>
+	<template>
+		<name>Макет6</name>
+		<template xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:AreaTemplate">
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Итого</v8:content>
+							</v8:item>
+						</dcsat:value>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Font" faceName="Arial" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">27.25</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">27.25</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">13</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">13</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">7</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">7</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="dcscor:Parameter">СуммаИтого</dcsat:value>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Font" faceName="Arial" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:HorizontalAlign">Left</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">13.75</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">13.75</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+			</dcsat:item>
+		</template>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>СуммаИтого</dcsat:name>
+			<dcsat:expression>Сумма</dcsat:expression>
+		</parameter>
+	</template>
+	<groupTemplate>
+		<groupName>СводныйЗаголовок1</groupName>
+		<templateType>Header</templateType>
+		<template>Макет2</template>
+	</groupTemplate>
+	<groupTemplate>
+		<groupName>Дополнительно шапка</groupName>
+		<templateType>Header</templateType>
+		<template>Макет3</template>
+	</groupTemplate>
+	<groupTemplate>
+		<groupName>ШапкаТаблицы1</groupName>
+		<templateType>Header</templateType>
+		<template>Макет4</template>
+	</groupTemplate>
+	<groupTemplate>
+		<groupName>СтрокиТаблицы1</groupName>
+		<templateType>Header</templateType>
+		<template>Макет5</template>
+	</groupTemplate>
+	<groupTemplate>
+		<groupName>Итоги1</groupName>
+		<templateType>Header</templateType>
+		<template>Макет6</template>
+	</groupTemplate>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Расчетный лист по аптеке</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ФизическоеЛицо</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ИНН</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Подразделение</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Должность</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>РазрядКатегория</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>МинимумПоФакту</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>МаксимумПоФакту</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Вид</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Показатель</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Тариф</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Сумма</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Коэффициент</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:left xsi:type="dcscor:Field">ФизическоеЛицо</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:userSettingID>e78ad544-7ec7-4a53-a3f0-4cc075ae125b</dcsset:userSettingID>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Период1</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardPeriod">
+						<v8:variant xsi:type="v8:StandardPeriodVariant">LastMonth</v8:variant>
+					</dcscor:value>
+					<dcsset:userSettingID>9e057874-84d5-4231-af6f-ea92dbd4e7bb</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Подразделение</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>5a044037-a7a9-418e-82f9-1101caa0eadb</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>ФизическоеЛицо.Наименование</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МакетОформления</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Море</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>РасположениеИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">End</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>РасположениеГруппировки</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionGroupPlacement">None</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>РасположениеРеквизитов</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionAttributesPlacement">Together</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Начисления</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:name>СводныйЗаголовок1</dcsset:name>
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>ФизическоеЛицо</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Должность</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>РазрядКатегория</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Подразделение</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ФизическоеЛицо</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:use>false</dcsset:use>
+						<dcsset:field>Должность</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:use>false</dcsset:use>
+						<dcsset:field>РазрядКатегория</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:use>false</dcsset:use>
+						<dcsset:field>Показатель</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:use>false</dcsset:use>
+						<dcsset:field>Тариф</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:use>false</dcsset:use>
+						<dcsset:field>Сумма</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:use>false</dcsset:use>
+						<dcsset:field>МинимумПоФакту</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:use>false</dcsset:use>
+						<dcsset:field>МаксимумПоФакту</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:outputParameters>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>МакетОформления</dcscor:parameter>
+						<dcscor:value xsi:type="xs:string">Море</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>РасположениеИтогов</dcscor:parameter>
+						<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">End</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>РасположениеПолейГруппировки</dcscor:parameter>
+						<dcscor:value xsi:type="dcsset:DataCompositionGroupFieldsPlacement">SeparatelyAndInTotalsOnly</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+						<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+					</dcscor:item>
+				</dcsset:outputParameters>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:name>Дополнительно шапка</dcsset:name>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto">
+							<dcsset:use>false</dcsset:use>
+						</dcsset:item>
+					</dcsset:selection>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:name>ШапкаТаблицы1</dcsset:name>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto">
+							<dcsset:use>false</dcsset:use>
+						</dcsset:item>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto">
+							<dcsset:use>false</dcsset:use>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:outputParameters>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:use>false</dcscor:use>
+							<dcscor:parameter>МакетОформления</dcscor:parameter>
+							<dcscor:value xsi:type="xs:string">Основной</dcscor:value>
+						</dcscor:item>
+					</dcsset:outputParameters>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:name>СтрокиТаблицы1</dcsset:name>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>Вид</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>Показатель</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>Тариф</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>Сумма</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:outputParameters>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:use>false</dcscor:use>
+							<dcscor:parameter>МакетОформления</dcscor:parameter>
+							<dcscor:value xsi:type="xs:string">БезОформления</dcscor:value>
+						</dcscor:item>
+					</dcsset:outputParameters>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:name>Итоги1</dcsset:name>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>Сумма</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:use>false</dcsset:use>
+							<dcsset:field>МаксимумПоФакту</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:use>false</dcsset:use>
+							<dcsset:field>МинимумПоФакту</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:outputParameters>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:use>false</dcscor:use>
+							<dcscor:parameter>МакетОформления</dcscor:parameter>
+							<dcscor:value xsi:type="xs:string">БезОформления</dcscor:value>
+						</dcscor:item>
+					</dcsset:outputParameters>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

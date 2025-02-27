@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="b81565c4-986e-49f0-8810-84af7dfceadf" extendedConfigurationObject="aef659d6-bf3c-4c70-ae9e-af146c01cf76">
+  <producedTypes>
+    <objectType typeId="e01ada14-137b-4dfe-a178-1eaade5dd204" valueTypeId="b931fb91-eae5-4477-8d5a-669515ccabfa"/>
+    <refType typeId="7dc2e2ff-0252-4c45-a330-f03275af3a8d" valueTypeId="cf86b08d-0e36-4752-a70c-ca3a7068e7de"/>
+    <selectionType typeId="1d2695a3-908c-44c4-b73c-a822b1ad2703" valueTypeId="a3310358-d08a-41e7-bf58-5a3a7d0ca5e1"/>
+    <listType typeId="48949ace-6ea6-4064-bb79-6e5a34857fb6" valueTypeId="176119ed-68a3-4ccf-ad22-5e8cbca9b102"/>
+    <managerType typeId="42e70937-e990-4c8c-b0d3-7ab7ca19ac75" valueTypeId="2bbe20f1-c579-412b-957f-a35f404fe61d"/>
+  </producedTypes>
+  <name>Увольнение</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:DocumentExtension">
+    <extendedConfigurationObject>Checked</extendedConfigurationObject>
+  </extension>
+</mdclass:Document>

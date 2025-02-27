@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="8c4ff701-d7dd-4e6f-b9f1-dc68046e1d1d">
+  <producedTypes>
+    <objectType typeId="42f4c8d0-ea7a-49a5-81f2-fdb7bfa87ffa" valueTypeId="55bf7ff1-a86c-4bbd-bab4-22462fcd3ba2"/>
+    <managerType typeId="061ffa6a-690d-481f-9db5-2f987958e60d" valueTypeId="4932b8fc-ca37-4064-a341-01731d881be8"/>
+  </producedTypes>
+  <name>РасчетЗарплатыПоАптеке</name>
+  <synonym>
+    <key>ru</key>
+    <value>Расчет зарплаты по аптеке</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>DataProcessor.РасчетЗарплатыПоАптеке.Form.Форма</defaultForm>
+  <forms uuid="46f6f275-0655-4af5-b15b-18a75708b500">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:DataProcessor>

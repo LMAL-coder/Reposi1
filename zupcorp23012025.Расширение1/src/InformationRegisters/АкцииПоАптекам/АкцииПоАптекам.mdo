@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="d04accc4-52a9-40b8-b97e-4c984eddead0">
+  <producedTypes>
+    <selectionType typeId="0e25e578-8739-42b8-a343-11dcc7969077" valueTypeId="d852aef6-0403-4f21-9f07-fc7110eb4028"/>
+    <listType typeId="d36180ed-98cf-4e02-95b1-c7dcce9c0cc1" valueTypeId="cdac73cf-897f-4b61-be3e-5a2540c2b2ac"/>
+    <managerType typeId="e13d823b-446a-4550-a752-3cb1f4261853" valueTypeId="4810d16e-80b0-4816-82e2-814312791dab"/>
+    <recordSetType typeId="47f0f00a-a6b3-4105-b02f-e2b0b69d0e8c" valueTypeId="62fc6fd9-5ce7-4812-a4dd-387385640d2d"/>
+    <recordKeyType typeId="968b5c23-f36d-4e08-a9ce-675dc1e7aa78" valueTypeId="bc8e8453-a232-44ae-885e-1a72ac644db8"/>
+    <recordType typeId="b9b8d6ed-86b8-494d-ad8a-123266e3ff61" valueTypeId="4d4aeb99-facc-4ca6-9fca-6da1525e4881"/>
+    <recordManagerType typeId="45069073-65bd-435e-989c-befb4ef22186" valueTypeId="314e1c02-7e84-4eae-b6f9-8e0f00e2f2d9"/>
+  </producedTypes>
+  <name>АкцииПоАптекам</name>
+  <synonym>
+    <key>ru</key>
+    <value>Акции по аптекам</value>
+  </synonym>
+  <dataHistory>Use</dataHistory>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <informationRegisterPeriodicity>Day</informationRegisterPeriodicity>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="7e351624-ca2a-4269-9b2d-87860f02c19d">
+    <name>Акция</name>
+    <synonym>
+      <key>ru</key>
+      <value>Акция</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.РазрядыКатегорииДолжностей</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="baba46b3-9b0b-4c20-8c23-1f9aaaaa2997">
+    <name>Аптека</name>
+    <synonym>
+      <key>ru</key>
+      <value>Аптека</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ПодразделенияОрганизаций</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

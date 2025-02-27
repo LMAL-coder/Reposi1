@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Report xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="5a2dd2b3-9d55-45a8-8e4b-5c67af605da9">
+  <producedTypes>
+    <objectType typeId="fc68a52c-71ea-4a46-9ecc-2c85c3e65275" valueTypeId="738c685d-e1c1-4db6-8f7a-70bf80d5e596"/>
+    <managerType typeId="905320fd-fc2c-418c-aabb-ab7115a023c7" valueTypeId="33aed569-7977-49af-8ac7-e4a97769a51d"/>
+  </producedTypes>
+  <name>РасчетныйЛистПоФизЛицу</name>
+  <synonym>
+    <key>ru</key>
+    <value>Расчетный лист по физлицу</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>Report.РасчетныйЛистПоФизЛицу.Form.ФормаОтчета</defaultForm>
+  <mainDataCompositionSchema>Report.РасчетныйЛистПоФизЛицу.Template.ОсновнаяСхемаКомпоновкиДанных</mainDataCompositionSchema>
+  <variantsStorage>SettingsStorage.ХранилищеВариантовОтчетов</variantsStorage>
+  <settingsStorage>SettingsStorage.ХранилищеВариантовОтчетов</settingsStorage>
+  <forms uuid="48f4290b-e0f7-4870-99d5-267f741c6142">
+    <name>ФормаОтчета</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма отчета</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="7d42f393-701c-4136-90b0-f40dc5c3d06c">
+    <name>ОсновнаяСхемаКомпоновкиДанных</name>
+    <synonym>
+      <key>ru</key>
+      <value>Основная схема компоновки данных</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+</mdclass:Report>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="c7093bcf-37c2-4fd8-ac2a-5bf15a631195">
+  <name>ОбработкаДатыВыбора</name>
+  <synonym>
+    <key>ru</key>
+    <value>Обработка даты выбора</value>
+  </synonym>
+  <clientManagedApplication>true</clientManagedApplication>
+</mdclass:CommonModule>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="5be0ce9d-520b-416c-81e1-2cf0cb76dfbb" extendedConfigurationObject="ba2ed569-c7ca-49fc-bb59-46f473d5b6e1">
+  <producedTypes>
+    <objectType typeId="77c7d284-e0f3-4cc5-ade9-e5fe7b647a38" valueTypeId="dd375190-7691-48f9-9fc0-55719a0ed316"/>
+    <refType typeId="acfe30f6-0b8f-4352-8ce7-e4e87a99aa6f" valueTypeId="97f551c0-3c25-48ee-acd6-d8734281c1dd"/>
+    <selectionType typeId="e6e3124e-d7aa-46d3-a541-19a49257828c" valueTypeId="11db6928-db60-499a-9821-d3015f5ea38e"/>
+    <listType typeId="3c4dbd5a-1515-46b5-ac66-2b59d980615b" valueTypeId="74efe74b-8b2f-4c14-a632-7f974a4e9787"/>
+    <managerType typeId="b5ea3620-547f-4b34-bdcd-d3275c94d8d7" valueTypeId="fd4f68f2-7356-46f9-a576-ded7d2541b90"/>
+  </producedTypes>
+  <name>РазрядыКатегорииДолжностей</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:CatalogExtension">
+    <extendedConfigurationObject>Checked</extendedConfigurationObject>
+  </extension>
+</mdclass:Catalog>

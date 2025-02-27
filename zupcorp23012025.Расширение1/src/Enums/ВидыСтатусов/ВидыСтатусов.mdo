@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Enum xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="02357c45-450c-44b4-ae4c-8da3dfdf4819">
+  <producedTypes>
+    <refType typeId="3296dac2-1c4e-4273-a2c8-69c3504e3969" valueTypeId="1d6bade7-a721-4f83-b6ff-e2ed79c21cea"/>
+    <listType typeId="ff4a3d9e-6066-41db-8fdc-5c081af763f9" valueTypeId="592edd50-39c7-4089-a823-1774ad37142a"/>
+    <managerType typeId="3b7c4c4e-5138-47c4-8d94-010aa1772d83" valueTypeId="29255648-9b0a-4ca5-ba33-b6c22ede08b2"/>
+  </producedTypes>
+  <name>ВидыСтатусов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Виды статусов</value>
+  </synonym>
+  <quickChoice>true</quickChoice>
+  <choiceMode>BothWays</choiceMode>
+  <enumValues uuid="4d9433b8-c287-484e-8884-2d3d197a60c7">
+    <name>Завершено</name>
+    <synonym>
+      <key>ru</key>
+      <value>Завершено</value>
+    </synonym>
+  </enumValues>
+</mdclass:Enum>

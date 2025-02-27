@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="060931b1-e331-49ba-a28c-9881234b96d8">
+  <producedTypes>
+    <selectionType typeId="25e9a79a-71a7-4ee5-a970-4d53470b81ad" valueTypeId="43065f1c-de7d-47d6-81ba-b5a43859d17a"/>
+    <listType typeId="3cada387-e879-4fa7-a3a2-427dcc7fe556" valueTypeId="34c26ad0-3e97-48ed-b531-c50caf3867e7"/>
+    <managerType typeId="48dc76af-c78a-4765-8b75-8ec52f48c251" valueTypeId="f4b672de-a2b7-4c46-ae6e-4f4bcdc53490"/>
+    <recordSetType typeId="dca02539-efe0-4ef8-bf4e-f2fdaefdfe35" valueTypeId="560d5e5d-1f83-49aa-ba46-a309759142af"/>
+    <recordKeyType typeId="a890a55c-3cfb-4bed-9329-df9a5fed64b6" valueTypeId="7d9c9275-45ab-4e9b-b359-fa1e18b2086e"/>
+    <recordType typeId="67742d78-8c3f-4984-b388-4f05352ba3d6" valueTypeId="f5f59062-1d7c-45ba-bfe3-a7e8a3bbe81d"/>
+    <recordManagerType typeId="1ccee62c-7060-4433-87fe-07953c71b29c" valueTypeId="e7c15175-cc12-440d-ad47-cbb7e9d2ae38"/>
+  </producedTypes>
+  <name>ПоказателиВесГраница</name>
+  <synonym>
+    <key>ru</key>
+    <value>Показатели вес граница (KPI)</value>
+  </synonym>
+  <dataHistory>Use</dataHistory>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <informationRegisterPeriodicity>Day</informationRegisterPeriodicity>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="d57d467f-ec2f-4e70-9b7d-f703599394a0">
+    <name>Вес</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вес в процентах</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="0df8cdfe-783c-4de5-81b8-1d5b716dfd40">
+    <name>Вес2</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вес в процентах2</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="fabf933c-d005-498d-9b45-844cc2345872">
+    <name>Минимум</name>
+    <synonym>
+      <key>ru</key>
+      <value>Минимум</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="efcc0b8b-b1ad-4e7d-9616-b99630a2ac1d">
+    <name>Максимум</name>
+    <synonym>
+      <key>ru</key>
+      <value>Максимум</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="57f5a3d2-f35f-49ba-8e7e-ef2ca5deab7c">
+    <name>Показатель</name>
+    <synonym>
+      <key>ru</key>
+      <value>Показатель</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ВидыПоказателей</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

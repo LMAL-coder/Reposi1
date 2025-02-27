@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Enum xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="5c598847-1d92-4721-a864-0e2691fa3865">
+  <producedTypes>
+    <refType typeId="fbb40b29-6ea8-477b-b80c-f89c8a6f91bb" valueTypeId="ff1f31a2-7444-496f-b1f7-9a5794f04e7b"/>
+    <listType typeId="15a5e0a4-283a-424b-8380-584fb6b62da6" valueTypeId="5704a341-6c7c-44f5-9c0e-c4cdcc658ca1"/>
+    <managerType typeId="6c8b5c10-8186-4fcb-ba1e-99ea5cf13428" valueTypeId="8d1eb05f-f271-49b7-b000-f73d66af6470"/>
+  </producedTypes>
+  <name>ВидыОценок</name>
+  <synonym>
+    <key>ru</key>
+    <value>Виды оценок</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <quickChoice>true</quickChoice>
+  <choiceMode>BothWays</choiceMode>
+  <defaultListForm>Enum.ВидыОценок.Form.ФормаСписка</defaultListForm>
+  <enumValues uuid="3b9860ad-bd59-4ca3-b823-03126c0754d8">
+    <name>Низкая</name>
+    <synonym>
+      <key>ru</key>
+      <value>Низкая</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="0aafff58-cc81-44ff-b6e8-aa8afecea20c">
+    <name>Удовлетворительная</name>
+    <synonym>
+      <key>ru</key>
+      <value>Удовлетворительная</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="e80afefa-7e72-4a50-8608-8ef454dee7d3">
+    <name>Хорошая</name>
+    <synonym>
+      <key>ru</key>
+      <value>Хорошая</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="fe9a22ec-cae4-465a-b081-fb65f834abfa">
+    <name>Высокая</name>
+    <synonym>
+      <key>ru</key>
+      <value>Высокая</value>
+    </synonym>
+  </enumValues>
+  <forms uuid="3030a2d0-95e3-4827-9bfa-674c8b9d0725">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:Enum>

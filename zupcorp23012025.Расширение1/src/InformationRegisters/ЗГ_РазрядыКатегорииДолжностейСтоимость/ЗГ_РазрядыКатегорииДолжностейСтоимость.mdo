@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="f167e265-0755-433d-90f6-36b5daab8aaf">
+  <producedTypes>
+    <selectionType typeId="88f22a27-0aa4-438e-a139-105c1a717aef" valueTypeId="205034a5-6fa8-48cd-9e0a-8628eb41a669"/>
+    <listType typeId="7be56184-ab69-415e-96cc-8685c55be204" valueTypeId="4f2f2a54-9f92-4ec5-9971-2abc385a98d6"/>
+    <managerType typeId="47d57f48-b31f-4c33-b279-5906ea40ff96" valueTypeId="3d536ca3-9f62-4b33-ad57-3ec6edf609d2"/>
+    <recordSetType typeId="8402a83b-9415-430b-8509-baecc65c9b32" valueTypeId="beb0fd4b-0bc4-47ef-bcb6-1063cce77f83"/>
+    <recordKeyType typeId="6110cedd-033e-4593-b245-7c613a55da86" valueTypeId="657b5022-a568-4400-b903-99275c80eeb4"/>
+    <recordType typeId="449d603d-518b-40e5-8e98-961d7a948d4e" valueTypeId="15a7b634-af90-4831-801f-9ab1be5581cf"/>
+    <recordManagerType typeId="c09b7b77-52e6-4a75-bb27-3f586f5c4ecc" valueTypeId="d8b290ae-09ae-4ccb-841e-11bcaa6c3954"/>
+  </producedTypes>
+  <name>ЗГ_РазрядыКатегорииДолжностейСтоимость</name>
+  <synonym>
+    <key>ru</key>
+    <value>Разряды категории должностей Стоимость</value>
+  </synonym>
+  <dataHistory>Use</dataHistory>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <informationRegisterPeriodicity>Day</informationRegisterPeriodicity>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="bcbdff4b-2da5-4273-8f77-5c429403a3ed">
+    <name>СтоимостьЧаса</name>
+    <synonym>
+      <key>ru</key>
+      <value>Стоимость часа</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="e45278cb-abfd-4650-9f27-a580eba2561b">
+    <name>Должность</name>
+    <synonym>
+      <key>ru</key>
+      <value>Должность</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Должности</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="0bcb891a-c5c5-4f98-8675-36ceb1afd812">
+    <name>РазрядКатегория</name>
+    <synonym>
+      <key>ru</key>
+      <value>Разряд категория</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.РазрядыКатегорииДолжностей</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

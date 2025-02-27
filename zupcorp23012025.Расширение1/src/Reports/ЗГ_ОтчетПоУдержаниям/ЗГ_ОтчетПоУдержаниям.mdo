@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Report xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="dfd61b35-ce12-41c6-b5cf-d5a429c1111b">
+  <producedTypes>
+    <objectType typeId="28e47ca7-7ed9-4884-8a7c-e00dec1ceadf" valueTypeId="9e36c120-8914-4860-8d3d-e44206934b01"/>
+    <managerType typeId="0f383b1a-d4ac-4574-b3fc-ad54f0d89d1a" valueTypeId="69ff9676-0df2-4898-9b5d-e77c6a12eb66"/>
+  </producedTypes>
+  <name>ЗГ_ОтчетПоУдержаниям</name>
+  <synonym>
+    <key>ru</key>
+    <value>Отчет по удержаниям (ЗГ)</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <mainDataCompositionSchema>Report.ЗГ_ОтчетПоУдержаниям.Template.ОсновнаяСхемаКомпоновкиДанных</mainDataCompositionSchema>
+  <variantsStorage>SettingsStorage.ХранилищеВариантовОтчетов</variantsStorage>
+  <templates uuid="914377e9-9f3b-4b32-977c-e4e8ff5f0486">
+    <name>ОсновнаяСхемаКомпоновкиДанных</name>
+    <synonym>
+      <key>ru</key>
+      <value>Основная схема компоновки данных</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+</mdclass:Report>

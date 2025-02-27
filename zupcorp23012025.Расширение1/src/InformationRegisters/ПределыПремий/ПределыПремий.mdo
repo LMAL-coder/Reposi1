@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="6c84e429-d9b6-4806-8451-b9b2fde72d7d">
+  <producedTypes>
+    <selectionType typeId="b4804a55-2c4f-4d30-8628-ec27a24ef4a8" valueTypeId="522b80b8-9305-448f-9c6f-1c4d7fe37eaf"/>
+    <listType typeId="fe6bef11-b655-49be-a7bb-f7ac03ec9880" valueTypeId="303f1ad9-1321-48f9-9c8a-1201b4c45114"/>
+    <managerType typeId="8dfbb9b4-afbb-4147-b9d8-9f157e455940" valueTypeId="7abb70f5-b3cb-4ae3-bdec-129e65487422"/>
+    <recordSetType typeId="6d38b83f-fc22-41f6-a445-4cd183ec106a" valueTypeId="29f57286-9a44-4cc1-a4c4-14ceabaaeaae"/>
+    <recordKeyType typeId="b46fa92f-ff98-4fcf-977f-dbc28ece03a2" valueTypeId="9de3967c-0714-450c-88d2-d938d4702d30"/>
+    <recordType typeId="a884206a-ec2c-4847-a8dc-b69c8b8f26a9" valueTypeId="7ba4c665-64c4-492d-a66b-b258cf5ae438"/>
+    <recordManagerType typeId="8302de16-6c88-4f83-8d37-6025fbc3c62e" valueTypeId="9c7595c1-6076-48c1-a35d-a0e8ef1bb41b"/>
+  </producedTypes>
+  <name>ПределыПремий</name>
+  <synonym>
+    <key>ru</key>
+    <value>Пределы премий</value>
+  </synonym>
+  <dataHistory>Use</dataHistory>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <defaultListForm>InformationRegister.ПределыПремий.Form.ФормаСписка</defaultListForm>
+  <informationRegisterPeriodicity>Day</informationRegisterPeriodicity>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="12f318a5-e5ac-474e-ac01-7a877a6ce91b">
+    <name>ВеличинаПремии</name>
+    <synonym>
+      <key>ru</key>
+      <value>Величина премии</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="ef95b4aa-6d38-4932-87b0-2f919743600a">
+    <name>ВидПремии</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид премии</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ВидыПремий</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="0285e300-f64b-4ab5-9e64-bfdea1245aa0">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

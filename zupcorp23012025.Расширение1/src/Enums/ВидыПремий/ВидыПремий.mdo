@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Enum xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="2517a66e-28bf-49de-bf9e-e5f96a7cf874">
+  <producedTypes>
+    <refType typeId="106361f1-63d1-47fc-894b-b64e178d2ddd" valueTypeId="5693e7c2-f868-4adf-a2e8-c20848fed374"/>
+    <listType typeId="5cb7daab-e3ee-4c77-bf6c-d1b9f4fb9e32" valueTypeId="9ceb7327-0b37-4276-9132-549cd0dd32e8"/>
+    <managerType typeId="669d9feb-a5dc-4cca-bb2e-c63f782b3e3a" valueTypeId="9f3e6354-3f07-4129-86d0-c2c26317bfb1"/>
+  </producedTypes>
+  <name>ВидыПремий</name>
+  <synonym>
+    <key>ru</key>
+    <value>Виды премий</value>
+  </synonym>
+  <quickChoice>true</quickChoice>
+  <choiceMode>BothWays</choiceMode>
+  <enumValues uuid="186cee39-6f7e-4249-83ea-7dc62b37050a">
+    <name>ПремияМаркетинговыеАкции</name>
+    <synonym>
+      <key>ru</key>
+      <value>Премия маркетинговые акции</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="cb41ba2a-3f9a-4452-9019-43efaee78c0e">
+    <name>ПремияСроки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Премия сроки</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="9fd6b094-64c2-43f8-a338-32c42713aef8">
+    <name>ПремияЛичныеКачества</name>
+    <synonym>
+      <key>ru</key>
+      <value>Премия личные качества</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="4cf90a78-c0a5-49a8-97ed-dbb878365e6e">
+    <name>ОтельКачественныйПоказатель</name>
+    <synonym>
+      <key>ru</key>
+      <value>Отель качественный показатель</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="78329af7-f54d-4bb8-b288-1857bca07918">
+    <name>ПремияЗвонки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Премия количество принятых звонков</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="cc571b71-0092-4a8d-b755-e17f650e4d80">
+    <name>ПремияСтрокиПеремещений</name>
+    <synonym>
+      <key>ru</key>
+      <value>Премия количество строк перемещений</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="56e55dfb-9133-4fcb-a0bf-3d084110777a">
+    <name>ПремияСроки2</name>
+    <synonym>
+      <key>ru</key>
+      <value>Премия сроки2</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="eb427588-0c39-412f-bee0-a804fb888586">
+    <name>ПремияМаркетинговыеАкции2</name>
+    <synonym>
+      <key>ru</key>
+      <value>Премия маркетинговые акции2</value>
+    </synonym>
+  </enumValues>
+</mdclass:Enum>
